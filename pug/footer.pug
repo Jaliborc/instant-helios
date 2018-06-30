@@ -4,12 +4,12 @@
       .col-12
         section.contact
           header
-            h3!= md(site.web.contact.title)
-          p!= md(site.web.contact.summary)
+            h3!= md(site.flavor.contact.title)
+          p!= md(site.flavor.contact.details)
           ul.icons
             li
               a.icon(href= 'mailto:' + site.basics.email)
-                +icon('envelope')
+                +icon('email')
             
             for profile in site.basics.profiles
               li

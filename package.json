@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jaliborc/html5up-helios",
   "dependencies": {
+    "dateformat": "^3.0.3",
     "markdown-it": "^8.4.1",
     "node-minify": "^3.1.0",
     "pug": "^2.0.3",

@@ -1,0 +1,9 @@
+#navButton
+  a.toggle(href='#navPanel')
+    +icon('menu')
+#navPanel
+  nav
+    
+if site.recaptcha-key
+  .g-recaptcha(data-sitekey= site.recaptcha-key, data-callback='recaptcha', data-size='invisible')
+  script(src='https://www.google.com/recaptcha/api.js')

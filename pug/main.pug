@@ -17,7 +17,6 @@ body(itemtype="http://schema.org/Person")
       include content.pug
     include carousel.pug
     include footer.pug
-    if site.recaptcha-key
-      include recaptcha.pug
-  
+    
+include scripted.pug
 script(src='scripts.js')

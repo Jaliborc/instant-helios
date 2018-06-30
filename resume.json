@@ -3,6 +3,8 @@
 		"name": "João Cardoso",
 		"label": "Software Engineer / CG Researcher",
 		"email": "fake@email.com",
+		"website": "http://jaliborc.com",
+		"resume": "http://jaliborc.com/resume",
 		"summary": "My recent work focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin. Outside of work, I am primarily known for being the developer of several major addons (third party software) for World of Warcraft, with millions of downloads worldwide. I started programming at a young age and since then I conciliated work with studies.",
 		"location": {
 			"city": "Coimbra",
@@ -25,21 +27,20 @@
 				"username": "jaliborc",
 				"url": "https://linkedin.com/in/jaliborc/"
 			}
-		],
-		"website": "http://jaliborc.com"
+		]
 	},
-	"web": {
+	"flavor": {
 		"welcome": {
 			"title": "Hi. I am **João Cardoso**.",
-			"summary": "In this site you will find a small selection of my work and get to know a little about me."
+			"details": "In this site you will find a small selection of my work and get to know a little about me."
 		},
 		"contact": {
 			"title": "Looking for more information?",
-			"summary": "You'll find source code and some of my projects online in the following websites.\nFor addon bug reports or feature requests, please do not email me directly."
+			"details": "You'll find source code and some of my projects online in some of these websites.\nFor bug reports or feature requests, please do not email me directly."
 		},
 		"error": {
 			"title": "**Area 404.** How did you get here?",
-			"summary": "This page does not exist. It was either removed, moved... ah... I mean... it never existed!\nGo back where you came from. And do not come back."
+			"details": "This page does not exist. It was either removed, moved... ah... I mean... it never existed!\nGo back where you came from. And do not come back."
 		}
 	},
 
@@ -182,7 +183,24 @@
 			"name": "Interactive Gaze Driven Animation of the Eye Region",
 			"publisher": "ACM Web3D '16 Proceedings of the 21st International Conference on Web3D Technology",
 			"releaseDate": "2016-07-22",
-			"website": "http://www.cs.ubc.ca/research/eyemoveweb3d16/"
+			"website": "http://www.cs.ubc.ca/research/eyemoveweb3d16/",
+			"resources": [
+				{
+					"type": "Award",
+					"name": "Best Paper Award",
+					"url": "https://www.cs.ubc.ca/node/51794"
+				},
+				{
+					"type": "Video",
+					"name": "Preview",
+					"url": "https://goo.gl/2mnKig"
+				},
+				{
+					"type": "HTML5",
+					"name": "Online Demo",
+					"url": "https://goo.gl/aJZnqZ"
+				}
+			]
 		},
 		{
 			"name": "Gaze Driven Animation of Eyes",
@@ -196,6 +214,35 @@
 			"releaseDate": "2013-07-14",
 			"summary": "Undergraduate Research Project",
 			"website": "http://jaliborc.com/downloads/prt-early.pdf"
+		}
+	],
+	"research": [
+		{
+			"name": "Facial Reconstruction using Single Light-Field Image",
+			"authors": "João Cardoso, Nuno Gonçalves",
+			"institution": "Institute of Systems and Robotics, University of Coimbra",
+			"startDate": "2017-02-01",
+			"endDate": "2018-05-01"
+		},
+		{
+			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
+			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
+			"institution": "Computer Animation and Interaction Capture Lab, McGill University",
+			"startDate": "2013-05-01",
+			"endDate": "2013-10-01",
+			"website": "https://github.com/jaliborc/prt-demos",
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://github.com/jaliborc/prt-demos"
+				},
+				{
+					"type": "Video",
+					"name": "Previews",
+					"url": "https://goo.gl/7sb6Ym"
+				}
+			]
 		}
 	],
 	"skills": [
@@ -269,7 +316,22 @@
 		{
 			"id": "research",
 			"title": "Research",
-			"summary": "Scientific studies on computer graphics and animation"
+			"picture": "images/eye-move-460.webm",
+			"summary": "Scientific studies on computer graphics and animation",
+			"details": "My research interests include real-time and photorealistic rendering, facial reconstruction, skin deformations, data driven animation and procedural methods. My current research focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin.",
+			"content": [
+				{
+					"type": "publications"
+				},
+				{
+					"type": "chapter",
+					"title": "Not Published",
+					"text": "Here are the working titles of other research topics I worked on, but did not have the chance to deepen enough or submit for publication. Instead of the publisher, the research laboratory or institute where the research was performed is listed. "
+				},
+				{
+					"type": "research"
+				}
+			]
 		},
 		{
 			"id": "wow",
@@ -277,7 +339,7 @@
 			"category": "Open Source",
 			"picture": "images/addons.webm",
 			"summary": "Third party plugins and open libraries for the famous game",
-			"depth": "I am currently the developer of several major addons for World of Warcraft, one of the most famous and influential MMORPGs. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
+			"details": "I am currently the developer of several major addons for World of Warcraft, one of the most famous and influential MMORPGs. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
 			"content": [
 				{
 					"type": "chapter",
@@ -303,7 +365,7 @@
 			"summary": "Sites and web applications I volunteered to do"
 		},
 		{
-			"id": "industry",
+			"id": "Industry",
 			"title": "Industry Experience",
 			"summary": "Other projects I was a part of when working with companies",
 			"depth": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue. ",

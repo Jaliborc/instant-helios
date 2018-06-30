@@ -205,6 +205,10 @@
 
 	p {
 		text-align: justify;
+
+		@include breakpoint('<=mobile') {
+			text-align: left;
+		}
 	}
 
 	br.clear {
@@ -497,6 +501,21 @@
 				&:hover {
 					color: #ef8376;
 				}
+			}
+		}
+	}
+
+	ul.resources {
+		list-style: none;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			padding: 0 10px 0 0;
+
+			svg {
+				font-size: 0.8em;
+				margin-right: 5px;
 			}
 		}
 	}
@@ -1418,27 +1437,16 @@
 				z-index: _misc(z-index-base) + 1;
 
 				.toggle {
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					border: 0;
-					outline: 0;
-
-					&:before {
-						font-family: FontAwesome;
 						text-decoration: none;
 						font-style: normal;
 						font-weight: normal;
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
-						content: '\f0c9';
 						color: #fff;
 						color: rgba(255, 255, 255, 0.75);
 						text-align: center;
 						display: block;
-						font-size: 14px;
+						font-size: 18px;
 						width: 80px;
 						height: 30px;
 						line-height: 30px;
@@ -1448,7 +1456,10 @@
 						background: rgba(132, 128, 136, 0.75);
 						border-top: 0;
 						border-radius: 0 0 0.35em 0.35em;
-					}
+
+						svg {
+							margin-top: 6px;
+						}
 				}
 			}
 

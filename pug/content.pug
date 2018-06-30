@@ -1,3 +1,24 @@
+mixin researchEntry(research)
+  .col-2
+    a.image.fit( href=research.website )
+      +image( research.picture || 'images/pic01.jpg' )
+    
+  .col-10
+    a( href=research.website )
+      h4= research.name
+    p
+      block
+        
+    if research.resources
+      ul.resources
+        for item in research.resources
+          li
+            a( href=item.url )
+              +icon( item.type.toLowerCase() )
+              = item.name
+
+  
+
 .wrapper.style1
   .container
     article#main.special
@@ -10,14 +31,30 @@
         a.image.featured(href='#')   
           +image(page.picture)
 
-      if page.depth
-        p!= md(page.depth)
+      if page.details
+        p!= md(page.details)
       
       if page.content
         for section in page.content
-          case section.type
-            when 'chapter'
-              section
+          section
+            case section.type
+              when 'chapter'
                 header
                   h3= section.title
                 p!= md(section.text)
+              when 'publications'
+                .row.gtr-50
+                  for article in site.publications
+                    +researchEntry(article)
+                      if article.summary
+                        = article.summary + ', '
+                      = article.publisher
+                      br
+                      i= 'Published ' + dateformat(article.releaseDate, 'mmmm yyyy')
+              when 'research'
+                .row.gtr-50
+                  for project in site.research
+                    +researchEntry(project)
+                      = project.institution
+                      br
+                      i= dateformat(project.startDate, 'mmmm yyyy') + ' - ' + dateformat(project.endDate, 'mmmm yyyy')

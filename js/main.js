@@ -47,33 +47,16 @@
 		$('.scrolly').scrolly();
 
 	// Nav.
-
-		// Button.
-			$(
-				'<div id="navButton">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
-
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+		$('#navPanel nav').append($('#nav').navList())
+		$('#navPanel').panel({
+			delay: 500,
+			hideOnClick: true,
+			hideOnSwipe: true,
+			resetScroll: true,
+			resetForms: true,
+			target: $body,
+			visibleClass: 'navPanel-visible'
+		});
 
 	// Carousels.
 		$('.carousel').each(function() {

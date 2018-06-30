@@ -10,19 +10,20 @@ if ( !fs.existsSync('build') )
 
 if ( options['-pug'] ) {
   const pug = require('pug')
-  const makePage = pug.compileFile('pug/main.pug')
+  const buildpage = pug.compileFile('pug/main.pug')
 
+  const dateformat = require('dateformat')
   const markdownit = require('markdown-it')({breaks: true, linkify: true})
   const md = (text) => markdownit.renderInline(text || '').replace(/\r?\n|\r/g, '').replace(/<br><br>/g, '</p><p>')
 
   let data = JSON.parse(fs.readFileSync('resume.json', 'utf8'))
   let pages = _.union(_.clone(data.portfolio), [
-    {id: 'index', banner: true, carousel: true},
-    {id: '404', title: data.web.error.title, summary: data.web.error.summary}
+    {id: '404', title: data.flavor.error.title, summary: data.flavor.error.details},
+    {id: 'index', banner: true}
   ])
 
   for (page of pages) {
-    let html = makePage({_: _, md: md, site: data, page: page})
+    let html = buildpage({_: _, md: md, dateformat: dateformat, site: data, page: page})
 
     fs.writeFileSync('build/' + page.id + '.html', html, 'utf8')
     console.log(success + 'Written ' + page.id + '.html')
