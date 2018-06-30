@@ -1,0 +1,23 @@
+.wrapper.style1
+  .container
+    article#main.special
+      header
+        h2
+          a(href= '/' + page.id)!= md(page.title)
+        p!= md(page.summary)
+        
+      if page.picture
+        a.image.featured(href='#')   
+          +image(page.picture)
+
+      if page.depth
+        p!= md(page.depth)
+      
+      if page.content
+        for section in page.content
+          case section.type
+            when 'chapter'
+              section
+                header
+                  h3= section.title
+                p!= md(section.text)

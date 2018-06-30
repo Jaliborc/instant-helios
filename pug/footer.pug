@@ -1,0 +1,24 @@
+#footer
+  .container
+    .row
+      .col-12
+        section.contact
+          header
+            h3!= md(site.web.contact.title)
+          p!= md(site.web.contact.summary)
+          ul.icons
+            li
+              a.icon(href= 'mailto:' + site.basics.email)
+                +icon('envelope')
+            
+            for profile in site.basics.profiles
+              li
+                a.icon(href= profile.url)
+                  +icon(profile.network.toLowerCase())
+                  span.label= profile.network
+        .copyright
+          ul.menu
+            li= '© ' + site.basics.name + '. All rights reserved.'
+            li
+              | Design: 
+              a(href='http://html5up.net') HTML5 UP

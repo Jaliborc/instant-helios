@@ -1,0 +1,31 @@
+{
+  "name": "html5up-helios",
+  "version": "1.0.0",
+  "description": "Automatically builds a website using HTML5Up's Helios theme and an extended jsonresume schema.",
+  "main": "build.js",
+  "scripts": {
+    "all": "node build.js -pug -js -sass",
+    "html": "node build.js -pug",
+    "pug": "node build.js -pug",
+    "js": "node build.js -js",
+    "css": "node build.js -sass",
+    "sass": "node build.js -sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaliborc/html5up-helios.git"
+  },
+  "author": "Joao Cardoso (Jaliborc)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaliborc/html5up-helios/issues"
+  },
+  "homepage": "https://github.com/jaliborc/html5up-helios",
+  "dependencies": {
+    "markdown-it": "^8.4.1",
+    "node-minify": "^3.1.0",
+    "pug": "^2.0.3",
+    "sass": "^1.7.3",
+    "underscore": "^1.9.1"
+  }
+}

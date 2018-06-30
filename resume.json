@@ -1,0 +1,324 @@
+{
+	"basics": {
+		"name": "João Cardoso",
+		"label": "Software Engineer / CG Researcher",
+		"email": "fake@email.com",
+		"summary": "My recent work focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin. Outside of work, I am primarily known for being the developer of several major addons (third party software) for World of Warcraft, with millions of downloads worldwide. I started programming at a young age and since then I conciliated work with studies.",
+		"location": {
+			"city": "Coimbra",
+			"countryCode": "PT",
+			"region": "Coimbra"
+		},
+		"profiles": [
+			{
+				"network": "GitHub",
+				"username": "jaliborc",
+				"url": "https://github.com/jaliborc"
+			},
+			{
+				"network": "Curse",
+				"username": "jaliborc",
+				"url": "https://curseforge.com/members/jaliborc/projects"
+			},
+			{
+				"network": "LinkedIn",
+				"username": "jaliborc",
+				"url": "https://linkedin.com/in/jaliborc/"
+			}
+		],
+		"website": "http://jaliborc.com"
+	},
+	"web": {
+		"welcome": {
+			"title": "Hi. I am **João Cardoso**.",
+			"summary": "In this site you will find a small selection of my work and get to know a little about me."
+		},
+		"contact": {
+			"title": "Looking for more information?",
+			"summary": "You'll find source code and some of my projects online in the following websites.\nFor addon bug reports or feature requests, please do not email me directly."
+		},
+		"error": {
+			"title": "**Area 404.** How did you get here?",
+			"summary": "This page does not exist. It was either removed, moved... ah... I mean... it never existed!\nGo back where you came from. And do not come back."
+		}
+	},
+
+	"work": [
+		{
+			"position": "Computer Vision Researcher",
+			"startDate": "2017-02-01",
+			"endDate": "2018-04-01",
+			"summary": "Project funded by the INCM, institution responsible for emission of official documents for several countries, to print 3D holograms of citizen faces in citizenship cards.",
+			"highlights": [
+				"Researched facial reconstruction using light-field cameras.",
+				"Implemented a system that generates 3D models and ready to burn laser holograms from single light field photographs, with both an automated API and a manual user friendly interface."
+			],
+			"website": "https://www.isr.uc.pt/",
+			"company": "Institute of Systems and Robotics"
+		},
+		{
+			"position": "Teaching and Research Assistant",
+			"startDate": "2014-09-01",
+			"endDate": "2016-11-01",
+			"summary": "Full-time job offered to eligible computer science students at the University of British Columbia, to pay for tuition and living costs.",
+			"highlights": [
+				"Researched at Sensorimotor System Lab.",
+				"Taught CPCS 314: Computer Graphics."
+			],
+			"website": "https://www.ubc.ca/",
+			"company": "University of British Columbia"
+		},
+		{
+			"position": "Undergraduate Researcher",
+			"startDate": "2013-05-01",
+			"endDate": "2013-09-01",
+			"summary": "My work on an undergraduate course served as the starting point of a research project at the Computer Animation and Interaction Capture Lab, supervised by professors Paul Kry (McGill) and Derek Nowrouzezahrai (Université de Montreal).",
+			"website": "https://www.mcgill.ca/",
+			"company": "McGill University"
+		},
+		{
+			"position": "Software Engineer Intern",
+			"startDate": "2012-08-01",
+			"endDate": "2012-11-01",
+			"summary": "A game engine that allows to bring .NET games into a vast multitude of platforms, such as Android, iOS and HTML5.",
+			"highlights": [
+				"Implemented the first versions of the C++ port of the engine.",
+				"Developed a system for automatic conversion of games in C# into C++."
+			],
+			"website": "https://www.deltaengine.net/",
+			"company": "DeltaEngine"
+		},
+		{
+			"position": "Technical Specialist",
+			"startDate": "2012-04-01",
+			"endDate": "2013-04-01",
+			"summary": "Weekly opinion article on the homepage of what was, at the time, a gaming news website.",
+			"highlights": [
+				"Selected and written articles on open source gaming software.",
+				"Performed interviews with the developers of spotlighted software.",
+				"Worked with the product manager, lead editor and the video team to ensure new items were published on a weakly basis."
+			],
+			"website": "https://www.curse.com/",
+			"company": "Curse Entertainment"
+		},
+		{
+			"position": "Open Source Developer",
+			"startDate": "2006-08-01",
+			"endDate": "2017-08-01",
+			"summary": "Unintentionally started own business at the age of 13, developing third party software for the game World of Warcraft.",
+			"highlights": [
+				"Over 50 million total downloads.",
+				"Created more than 20 different projects."
+			],
+			"website": "http://jaliborc.com/wow",
+			"company": "Self-Employed"
+		}
+	],
+	"education": [
+		{
+			"institution": "University of British Columbia",
+			"area": "Computer Science",
+			"studyType": "Masters",
+			"startDate": "2014-09-01",
+			"endDate": "2016-11-01",
+			"gpa": "81.7%"
+		},
+		{
+			"institution": "McGill University",
+			"area": "Computer Science",
+			"studyType": "Exchange",
+			"startDate": "2013-01-01",
+			"endDate": "2013-05-01",
+			"gpa": "3.67 GPA"
+		},
+		{
+			"institution": "University of Coimbra",
+			"area": "Computer Science",
+			"studyType": "Bachelor",
+			"startDate": "2011-09-01",
+			"endDate": "2014-06-01",
+			"gpa": "16/20"
+		},
+		{
+			"institution": "Music Conservatory of Coimbra",
+			"area": "Classical Guitar",
+			"studyType": "Professional Certification",
+			"startDate": "2002-09-01",
+			"endDate": "2011-06-01",
+			"gpa": "15/20"
+		}
+	],
+	"awards": [
+		{
+			"title": "Best Paper Award",
+			"date": "2016-07-22",
+			"awarder": "ACM Web3D '16"
+		},
+		{
+			"title": "Computer Science Merit Award",
+			"date": "2014-09-01",
+			"awarder": "University of British Columbia"
+		},
+		{
+			"title": "3% Best Student Award",
+			"date": "2012-12-01",
+			"awarder": "University of Coimbra"
+		},
+		{
+			"title": "EU - Canada Transatlantic Exchange Program Partnerships Scholarship",
+			"date": "2012-06-01",
+			"awarder": "European Commission"
+		}
+	],
+	"publications": [
+		{
+			"name": "Interactive Animation of the Eye Region",
+			"publisher": "University of British Columbia",
+			"releaseDate": "2016-09-22",
+			"summary": "Master Thesis",
+			"website": "https://goo.gl/i4Vq5L"
+		},
+		{
+			"name": "Interactive Gaze Driven Animation of the Eye Region",
+			"publisher": "ACM Web3D '16 Proceedings of the 21st International Conference on Web3D Technology",
+			"releaseDate": "2016-07-22",
+			"website": "http://www.cs.ubc.ca/research/eyemoveweb3d16/"
+		},
+		{
+			"name": "Gaze Driven Animation of Eyes",
+			"publisher": "ACM SIGGRAPH/Eurographics Symposium on Computer Animation 2015",
+			"releaseDate": "2015-08-09",
+			"website": "https://dl.acm.org/citation.cfm?id=2795140"
+		},
+		{
+			"name": "Error Analysis of Precomputed Radiance Transfer for Deforming Geometry",
+			"publisher": "McGill University",
+			"releaseDate": "2013-07-14",
+			"summary": "Undergraduate Research Project",
+			"website": "http://jaliborc.com/downloads/prt-early.pdf"
+		}
+	],
+	"skills": [
+		{
+			"name": "Programming Languages",
+			"keywords": [
+				"Lua",
+				"Python",
+				"Javascript",
+				"C++",
+				"C#",
+				"Matlab"
+			],
+			"type": "Prefered"
+		},
+		{
+			"name": "Rendering",
+			"keywords": [
+				"OpenGL and WebGL",
+				"Reflectance Models",
+				"Screen Space Computations",
+				"Physically Based Light Transport",
+				"Spherical Harmonics",
+				"Area Lights"
+			],
+			"type": "Speciality"
+		},
+		{
+			"name": "Machine Learning",
+			"keywords": [
+				"Dimensionality Reduction",
+				"Nonlinear Regression",
+				"Clustering",
+				"Unsupervised Learning",
+				"Classification"
+			],
+			"type": "Proficient"
+		},
+		{
+			"name": "Computer Vision",
+			"keywords": [
+				"3D Reconstruction",
+				"Light Fields",
+				"Noise Removal",
+				"Background Detection"
+			],
+			"type": "Experienced"
+		},
+		{
+			"name": "Other",
+			"keywords": [
+				"UI Development",
+				"Web Development",
+				"UX"
+			],
+			"type": "Proficient"
+		}
+	],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Native speaker"
+		},
+		{
+			"language": "Portuguese",
+			"fluency": "Native speaker"
+		}
+	],
+
+	"portfolio": [
+		{
+			"id": "research",
+			"title": "Research",
+			"summary": "Scientific studies on computer graphics and animation"
+		},
+		{
+			"id": "wow",
+			"title": "World of Warcraft",
+			"category": "Open Source",
+			"picture": "images/addons.webm",
+			"summary": "Third party plugins and open libraries for the famous game",
+			"depth": "I am currently the developer of several major addons for World of Warcraft, one of the most famous and influential MMORPGs. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
+			"content": [
+				{
+					"type": "chapter",
+					"title": "Development Process",
+					"text": "Programming is made in Lua, using an official API provided for all drawing, security and server communication mechanics. Rendering is done on top of OpenGL, but no direct access to the pipeline is permitted. If the developer whishes, XML can be used to declare static user interface objects and templates.\n\nGiven it is an online game, a lot of effort was put into ensuring addons do not allow for unfair play (for instance, performing automated actions) or that can change how the game world looks. Hence the lua environment can be seen as a restricted virtual machine.\n\nOne good example is that addons have no disk or internet access. When the program is started, all data must be loaded at once from plain Lua files as Lua variables. This makes it much harder than normal to develop programs that rely on large amounts of data. Ludwig, for instance, is an in-game database of every item in World of Warcraft (more than 63.000 as of 2014). Most of the development time was spent on efficiently storing the entire database as a single Lua string, while still allowing for fast searches. The same can be said of the world data PetTracker provides."
+				},
+				{
+					"type": "chapter",
+					"title": "Personal Path",
+					"text": "Making addons was my very first step into programming and computer science, when I was 13 years old. At the time, the great majority of addons were not very complex and the market far from profitable. For instance, my addon Scrap was the first junk seller to have an actual interface (others were configured using the command line) and the first addon to have in-game tutorials. The last latter became a common practice of the game developer, which now provides in-game tutorials for new interface elements it incorporates.\n\nNot all the addons I have created are still being maintained. Some became unecessary, while others had to be dropped to make time for other more popular projects. Two examples I want to highlight are Bongos Cornucopia and Cornucopia. The latter is one of the addons I am most proud of, although it never had much commercial success."
+				}
+			]
+		},
+		{
+			"id": "other",
+			"title": "Other Code",
+			"category": "Open Source",
+			"summary": "Uncategorized or old open-source coding projects"
+		},
+		{
+			"id": "volunteer",
+			"title": "Volunteer Work",
+			"summary": "Sites and web applications I volunteered to do"
+		},
+		{
+			"id": "industry",
+			"title": "Industry Experience",
+			"summary": "Other projects I was a part of when working with companies",
+			"depth": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue. ",
+			"content": [
+				{
+					"type": "chapter",
+					"title": "Ultrices tempor sagittis nisl",
+					"text": "Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.\n\nEleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
+				},
+				{
+					"type": "chapter",
+					"title": "Augue euismod feugiat tempus",
+					"text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna."
+				}
+			]
+		}
+	]
+}

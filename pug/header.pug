@@ -1,0 +1,40 @@
+#header.is-preload(class = page.banner && 'homepage' || '')
+  #inner
+    if page.banner
+      header
+        h1
+          a#logo(href='/')= site.basics.name
+        hr
+        p= site.basics.label
+      footer
+        a.button.circled.scrolly(href='#banner') About
+    else
+      header
+        h1
+          a#logo(href='/')= site.basics.name
+  #nav
+    ul
+      li
+        a(href='/') Home
+      li
+        a Portfolio
+        ul
+          - let sections = _.groupBy(site.portfolio, page => page.category)
+          
+          for page in site.portfolio
+            - let section = page.category
+            if !section
+              li
+                a( href='/' + page.id )= page.title
+            else if sections[section]
+              li
+                a= page.category + '…'
+                ul
+                  for page in sections[section]
+                    li
+                      a( href='/' + page.id )= page.title  
+              - sections[section] = null
+      li
+        a( href=site.basics.resume ) Resume
+      li
+        a( href='mailto:' + site.basics.email ) Contact
