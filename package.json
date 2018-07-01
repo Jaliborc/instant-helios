@@ -1,7 +1,7 @@
 {
   "name": "instant-helios",
   "version": "1.0.0",
-  "description": "Automatically builds a website using HTML5Up's Helios theme and an extended jsonresume schema.",
+  "description": "Instantly build a website using HTML5Up's Helios theme and an extended jsonresume schema.",
   "main": "build.js",
   "scripts": {
     "all": "node build -pug -js -sass",
