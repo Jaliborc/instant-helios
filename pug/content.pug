@@ -1,7 +1,7 @@
 mixin listEntry(entry)
   .col-2
     a.image.fit( href=entry.website )
-      +image( entry.picture || 'images/pic01.jpg' )
+      +resizedimage(entry.picture || 'assets/placeholder.jpg', 217, 120)
     
   .col-10
     h4
@@ -53,7 +53,7 @@ mixin listEntry(entry)
                           = article.summary + ', '
                         = article.publisher
                       .line
-                        i= 'Published ' + dateformat(article.releaseDate, 'mmmm yyyy')
+                        i= 'Published ' + moment(article.releaseDate).format('MMMM YYYY')
                         
               when 'projects'
                 .row.gtr-50
@@ -64,4 +64,5 @@ mixin listEntry(entry)
                       if project.summary
                         .line!= md(project.summary)
                       .line
-                        i= dateformat(project.startDate, 'mmmm yyyy') + ' - ' + dateformat(project.endDate, 'mmmm yyyy')
+                        i
+                          +period(project.startDate, project.endDate)

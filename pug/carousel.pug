@@ -3,7 +3,7 @@ section.carousel
     for page in site.portfolio
       article
         a.image.featured( href='/' + page.id )
-          img( src='images/' + page.id + '.jpg' )
+          +resizedimage(page.thumbnail || page.picture || 'assets/placeholder.jpg', 360, 260)
         header
           h3
             a( href='/' + page.id )= page.title

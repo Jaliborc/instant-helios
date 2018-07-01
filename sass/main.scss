@@ -520,24 +520,6 @@
 		}
 	}
 
-
-/* Badges */
-
-		.badge {
-				color: #fff;
-				background-color: #df7366;
-				margin-left: 0.5em;
-		    display: inline-block;
-		    padding: .25em .4em;
-		    font-size: 75%;
-		    font-weight: 700;
-		    line-height: 1;
-		    text-align: center;
-		    white-space: nowrap;
-		    vertical-align: baseline;
-		    border-radius: .25rem;
-		}
-
 /* Form */
 
 	form {
@@ -697,7 +679,6 @@
 
 		&:before {
 			display: inline-block;
-			font-family: FontAwesome;
 			font-size: 1.25em;
 			text-decoration: none;
 			font-style: normal;
@@ -729,6 +710,35 @@
 		}
 	}
 
+/* Badges */
+
+		.badge {
+				color: #fff;
+				background-color: #df7366;
+				margin-left: 0.5em;
+		    display: inline-block;
+		    padding: .25em .4em;
+		    font-size: 75%;
+		    font-weight: 700;
+		    line-height: 1;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: baseline;
+		    border-radius: .25rem;
+		}
+
+/* Clock */
+
+	.clock {
+		display: inline;
+		margin-left: .3em;
+
+		svg {
+			font-size: 0.7em;
+			margin: 0 0.4em;
+		}
+	}
+
 /* Wrapper */
 
 	.wrapper {
@@ -748,7 +758,7 @@
 
 	#header {
 		position: relative;
-		background-image: url('images/header.jpg');
+		background-image: url('header.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;

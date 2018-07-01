@@ -12,3 +12,26 @@ mixin image(src)
         source(type="video/mpg4", src=src)
     default
       img(src=src)
+        
+mixin resizedimage(src, width, height)
+  case src.split('.').pop()
+    when 'webm'
+      +image(src)
+    when 'mpg4'
+      +image(src)
+    default
+      +image(resize(src, width, height))
+        
+mixin period(startDate, endDate)
+  -
+    const duration = moment.duration
+    let start = moment(startDate)
+    let end = moment(endDate)
+    let dt = end.diff(start)
+    
+  = start.format('MMMM YYYY')
+  if ( duration(dt).months() > 0 )
+    = ' - ' + (endDate && end.format('MMMM YYYY') || 'Present')
+    .clock
+      +icon('clock')
+      = duration(dt).humanize()
