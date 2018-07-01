@@ -22,7 +22,7 @@ if ( options['-pug'] ) {
     {id: 'index', banner: true}
   ])
 
-  for (page of pages) {
+  for ( let page of pages ) {
     let html = buildpage({_: _, md: md, dateformat: dateformat, site: data, page: page})
 
     fs.writeFileSync('build/' + page.id + '.html', html, 'utf8')
@@ -51,7 +51,7 @@ if ( options['-sass'] ) {
   const sass = require('sass')
   const sheets = ['main', 'noscript']
 
-  for ( sheet of sheets ) {
+  for ( let sheet of sheets ) {
     let css = sass.renderSync({file: 'sass/' + sheet + '.scss', outputStyle: 'compressed'})
 
     fs.writeFileSync('build/' + sheet + '.css', css.css, 'utf8')

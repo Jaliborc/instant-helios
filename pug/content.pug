@@ -1,23 +1,21 @@
-mixin researchEntry(research)
+mixin listEntry(entry)
   .col-2
-    a.image.fit( href=research.website )
-      +image( research.picture || 'images/pic01.jpg' )
+    a.image.fit( href=entry.website )
+      +image( entry.picture || 'images/pic01.jpg' )
     
   .col-10
-    a( href=research.website )
-      h4= research.name
-    p
-      block
+    h4
+      a( href=entry.website )= entry.name
+    block
         
-    if research.resources
+    if entry.resources
       ul.resources
-        for item in research.resources
+        for item in entry.resources
           li
             a( href=item.url )
               +icon( item.type.toLowerCase() )
               = item.name
-
-  
+              
 
 .wrapper.style1
   .container
@@ -45,16 +43,17 @@ mixin researchEntry(research)
               when 'publications'
                 .row.gtr-50
                   for article in site.publications
-                    +researchEntry(article)
-                      if article.summary
-                        = article.summary + ', '
-                      = article.publisher
-                      br
-                      i= 'Published ' + dateformat(article.releaseDate, 'mmmm yyyy')
+                    +listEntry(article)
+                      .line
+                        if article.summary
+                          = article.summary + ', '
+                        = article.publisher
+                      .line
+                        i= 'Published ' + dateformat(article.releaseDate, 'mmmm yyyy')
               when 'research'
                 .row.gtr-50
                   for project in site.research
-                    +researchEntry(project)
-                      = project.institution
-                      br
-                      i= dateformat(project.startDate, 'mmmm yyyy') + ' - ' + dateformat(project.endDate, 'mmmm yyyy')
+                    +listEntry(project)
+                      .line= project.organization
+                      .line
+                        i= dateformat(project.startDate, 'mmmm yyyy') + ' - ' + dateformat(project.endDate, 'mmmm yyyy')

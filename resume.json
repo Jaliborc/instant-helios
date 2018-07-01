@@ -220,14 +220,14 @@
 		{
 			"name": "Facial Reconstruction using Single Light-Field Image",
 			"authors": "João Cardoso, Nuno Gonçalves",
-			"institution": "Institute of Systems and Robotics, University of Coimbra",
+			"organization": "Institute of Systems and Robotics, University of Coimbra",
 			"startDate": "2017-02-01",
 			"endDate": "2018-05-01"
 		},
 		{
 			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
 			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
-			"institution": "Computer Animation and Interaction Capture Lab, McGill University",
+			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
 			"startDate": "2013-05-01",
 			"endDate": "2013-10-01",
 			"website": "https://github.com/jaliborc/prt-demos",

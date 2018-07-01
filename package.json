@@ -1,26 +1,27 @@
 {
-  "name": "html5up-helios",
+  "name": "instant-helios",
   "version": "1.0.0",
   "description": "Automatically builds a website using HTML5Up's Helios theme and an extended jsonresume schema.",
   "main": "build.js",
   "scripts": {
-    "all": "node build.js -pug -js -sass",
-    "html": "node build.js -pug",
-    "pug": "node build.js -pug",
-    "js": "node build.js -js",
-    "css": "node build.js -sass",
-    "sass": "node build.js -sass"
+    "all": "node build -pug -js -sass",
+    "html": "node build -pug",
+    "pug": "node build -pug",
+    "js": "node build -js",
+    "css": "node build -sass",
+    "sass": "node build -sass",
+    "test": "jshint build.js | npm run all"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaliborc/html5up-helios.git"
+    "url": "https://github.com/jaliborc/instant-helios.git"
   },
   "author": "Joao Cardoso (Jaliborc)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jaliborc/html5up-helios/issues"
+    "url": "https://github.com/jaliborc/instant-helios/issues"
   },
-  "homepage": "https://github.com/jaliborc/html5up-helios",
+  "homepage": "https://github.com/jaliborc/instant-helios",
   "dependencies": {
     "dateformat": "^3.0.3",
     "markdown-it": "^8.4.1",
@@ -28,5 +29,12 @@
     "pug": "^2.0.3",
     "sass": "^1.7.3",
     "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  },
+  "jshintConfig": {
+    "esversion": 6,
+    "asi": true
   }
 }
