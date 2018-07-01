@@ -6,6 +6,9 @@ mixin listEntry(entry)
   .col-10
     h4
       a( href=entry.website )= entry.name
+        if entry.keywords
+            for word in entry.keywords
+              .badge= word
     block
         
     if entry.resources
@@ -40,6 +43,7 @@ mixin listEntry(entry)
                 header
                   h3= section.title
                 p!= md(section.text)
+  
               when 'publications'
                 .row.gtr-50
                   for article in site.publications
@@ -50,10 +54,14 @@ mixin listEntry(entry)
                         = article.publisher
                       .line
                         i= 'Published ' + dateformat(article.releaseDate, 'mmmm yyyy')
-              when 'research'
+                        
+              when 'projects'
                 .row.gtr-50
-                  for project in site.research
+                  for project in _.filter(site.projects, p => p.type == section.filter)
                     +listEntry(project)
-                      .line= project.organization
+                      if project.organization
+                        .line= project.organization
+                      if project.summary
+                        .line!= md(project.summary)
                       .line
                         i= dateformat(project.startDate, 'mmmm yyyy') + ' - ' + dateformat(project.endDate, 'mmmm yyyy')

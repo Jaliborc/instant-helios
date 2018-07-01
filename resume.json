@@ -216,35 +216,6 @@
 			"website": "http://jaliborc.com/downloads/prt-early.pdf"
 		}
 	],
-	"research": [
-		{
-			"name": "Facial Reconstruction using Single Light-Field Image",
-			"authors": "João Cardoso, Nuno Gonçalves",
-			"organization": "Institute of Systems and Robotics, University of Coimbra",
-			"startDate": "2017-02-01",
-			"endDate": "2018-05-01"
-		},
-		{
-			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
-			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
-			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
-			"startDate": "2013-05-01",
-			"endDate": "2013-10-01",
-			"website": "https://github.com/jaliborc/prt-demos",
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://github.com/jaliborc/prt-demos"
-				},
-				{
-					"type": "Video",
-					"name": "Previews",
-					"url": "https://goo.gl/7sb6Ym"
-				}
-			]
-		}
-	],
 	"skills": [
 		{
 			"name": "Programming Languages",
@@ -312,6 +283,209 @@
 		}
 	],
 
+	"projects": [
+		{
+			"type": "research",
+			"name": "Facial Reconstruction using Single Light-Field Image",
+			"authors": "João Cardoso, Nuno Gonçalves",
+			"organization": "Institute of Systems and Robotics, University of Coimbra",
+			"startDate": "2017-02-01",
+			"endDate": "2018-05-01"
+		},
+		{
+			"type": "research",
+			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
+			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
+			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
+			"startDate": "2013-05-01",
+			"endDate": "2013-10-01",
+			"website": "https://github.com/jaliborc/prt-demos",
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://github.com/jaliborc/prt-demos"
+				},
+				{
+					"type": "Video",
+					"name": "Previews",
+					"url": "https://goo.gl/7sb6Ym"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "Project Manager",
+			"summary": "Outdated tool to automate uploading [World of Warcraft](http://jaliborc.com/wow) addon builds to the defunct [Curse.com](http://www.curse.com/)",
+			"startDate": "2010-02-01",
+			"endDate": "2016-07-01",
+			"website": "https://github.com/jaliborc/project-manager",
+			"keywords": [
+				"Python",
+				"wxWidgets"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://github.com/jaliborc/project-manager"
+				},
+				{
+					"type": "Binary",
+					"name": "Builds",
+					"url": "https://www.github.com/jaliborc/project-manager/releases"
+				},
+				{
+					"type": "Video",
+					"name": "Preview",
+					"url": "https://youtu.be/KVvpwLLQTT4"
+				},
+				{
+					"type": "Link",
+					"name": "Sucessor",
+					"url": "https://www.github.com/jaliborc/upmod"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "FlyBeat",
+			"authors": "João Cardoso , Andre Baptista, Rui Casaleiro",
+			"summary": "A PC game in the style of [Audio Surf](http://www.audio-surf.com/) but fully 3D and with cellphones as optional controllers",
+			"startDate": "2014-02-17",
+			"endDate": "2014-07-17",
+			"website": "https://www.github.com/flybeat-game/",
+			"keywords": [
+				"ActionScript",
+				"Away3D",
+				"Java",
+				"Matlab"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://www.github.com/flybeat-game/"
+				},
+				{
+					"type": "Binary",
+					"name": "Builds",
+					"url": "https://github.com/flybeat-game/flybeat/releases"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "Mitsuba Extension",
+			"summary": "Allows [Mitsuba](https://www.mitsuba-renderer.org/) to render per-vertex data and use environment maps of spherical harmonics as light sources",
+			"startDate": "2013-06-01",
+			"endDate": "2013-09-01",
+			"website": "https://www.github.com/jaliborc/mitsuba",
+			"keywords": [
+				"C++",
+				"Mitsuba"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://www.github.com/jaliborc/mitsuba/"
+				},
+				{
+					"type": "Binary",
+					"name": "Builds",
+					"url": "https://www.github.com/jaliborc/mitsuba/releases"
+				},
+				{
+					"type": "Research",
+					"name": "Related Research",
+					"url": "http://jaliborc.com/research#prtpose"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "Rush Gun",
+			"summary": "Simple game done in 1 day when applying to [DeltaEngine](https://www.deltaengine.net/) to show knowledge of C#",
+			"startDate": "2012-05-22",
+			"endDate": "2012-05-23",
+			"website": "https://www.github.com/jaliborc/rushgun",
+			"keywords": [
+				"C#",
+				"Unity"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://www.github.com/jaliborc/rushgun"
+				},
+				{
+					"type": "Binary",
+					"name": "Builds",
+					"url": "https://www.github.com/jaliborc/rushgun/releases"
+				},
+				{
+					"type": "Video",
+					"name": "Preview",
+					"url": "https://youtu.be/MB-gdsrFPfU"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "Rubber Stack",
+			"summary": "My first experiment working with Unity",
+			"startDate": "2012-04-12",
+			"endDate": "2012-04-13",
+			"website": "https://www.github.com/jaliborc/rubberstack",
+			"keywords": [
+				"Boo (C# variant)",
+				"Unity"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://www.github.com/jaliborc/rubberstack"
+				},
+				{
+					"type": "Video",
+					"name": "Preview",
+					"url": "https://youtu.be/4UOQAKPdBBE"
+				}
+			]
+		},
+		{
+			"type": "opensource",
+			"name": "Demo Castle",
+			"summary": "My first experiment working with 3D graphics",
+			"startDate": "2010-11-01",
+			"endDate": "2010-11-20",
+			"website": "https://www.github.com/jaliborc/democastle",
+			"keywords": [
+				"C++",
+				"Irrlicht Engine"
+			],
+			"resources": [
+				{
+					"type": "Github",
+					"name": "Source",
+					"url": "https://www.github.com/jaliborc/democastle"
+				},
+				{
+					"type": "Binary",
+					"name": "Builds",
+					"url": "https://www.github.com/jaliborc/democastle/releases"
+				},
+				{
+					"type": "Video",
+					"name": "Preview",
+					"url": "https://youtu.be/oKCe8hE4r5k"
+				}
+			]
+		}
+	],
 	"portfolio": [
 		{
 			"id": "research",
@@ -329,7 +503,8 @@
 					"text": "Here are the working titles of other research topics I worked on, but did not have the chance to deepen enough or submit for publication. Instead of the publisher, the research laboratory or institute where the research was performed is listed. "
 				},
 				{
-					"type": "research"
+					"type": "projects",
+					"filter": "research"
 				}
 			]
 		},
@@ -355,32 +530,22 @@
 		},
 		{
 			"id": "other",
-			"title": "Other Code",
+			"title": "Other Projects",
 			"category": "Open Source",
-			"summary": "Uncategorized or old open-source coding projects"
+			"summary": "Open-source tools and small personal game projects",
+			"picture": "images/eye-move-460.webm",
+			"content": [
+				{
+					"type": "projects",
+					"filter": "opensource"
+				}
+			]
 		},
 		{
 			"id": "volunteer",
 			"title": "Volunteer Work",
-			"summary": "Sites and web applications I volunteered to do"
-		},
-		{
-			"id": "Industry",
-			"title": "Industry Experience",
-			"summary": "Other projects I was a part of when working with companies",
-			"depth": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue. ",
-			"content": [
-				{
-					"type": "chapter",
-					"title": "Ultrices tempor sagittis nisl",
-					"text": "Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna.\n\nEleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
-				},
-				{
-					"type": "chapter",
-					"title": "Augue euismod feugiat tempus",
-					"text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna."
-				}
-			]
+			"summary": "Sites and web applications I volunteered to do",
+			"details": "Page content still in the works."
 		}
 	]
 }
