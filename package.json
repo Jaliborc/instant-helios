@@ -1,30 +1,28 @@
 {
   "name": "instant-helios",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Instantly build a website using HTML5Up's Helios theme and an extended jsonresume schema.",
+  "author": "Joao Cardoso (Jaliborc)",
+  "license": "MIT",
   "main": "build.js",
-  "scripts": {
-    "all": "node build -pug -js -sass",
-    "html": "node build -pug",
-    "pug": "node build -pug",
-    "js": "node build -js",
-    "css": "node build -sass",
-    "sass": "node build -sass",
-    "test": "jshint build.js | npm run all"
-  },
+  "homepage": "https://github.com/jaliborc/instant-helios",
   "repository": {
     "type": "git",
     "url": "https://github.com/jaliborc/instant-helios.git"
   },
-  "author": "Joao Cardoso (Jaliborc)",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jaliborc/instant-helios/issues"
   },
-  "homepage": "https://github.com/jaliborc/instant-helios",
+  "bin": {
+    "helios" : "./build.js"
+  },
+  "scripts": {
+    "test": "jshint build.js | node build"
+  },
   "dependencies": {
     "dateformat": "^3.0.3",
     "markdown-it": "^8.4.1",
+    "minimist": "^1.2.0",
     "node-minify": "^3.1.0",
     "pug": "^2.0.3",
     "sass": "^1.7.3",
