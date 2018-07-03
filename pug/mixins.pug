@@ -7,20 +7,17 @@ mixin image(src)
     when 'webm' 
       video(autoplay loop muted playsinline)
         source(type="video/webm", src=src)
-    when 'mpg4'
+    when 'mp4'
       video(autoplay loop muted playsinline)
-        source(type="video/mpg4", src=src)
+        source(type="video/mp4", src=src)
+    when 'ogg'
+      video(autoplay loop muted playsinline)
+        source(type="video/ogg", src=src)
     default
       img(src=src)
         
 mixin resizedimage(src, width, height)
-  case src.split('.').pop()
-    when 'webm'
-      +image(src)
-    when 'mpg4'
-      +image(src)
-    default
-      +image(resize(src, width, height))
+  +image(resize && resize(src, width, height) || src)
         
 mixin period(startDate, endDate)
   -

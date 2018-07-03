@@ -4,24 +4,24 @@ const _ = require('underscore')
 
 const success = '\x1b[32m√\x1b[0m '
 const fail = '\x1b[31m×\x1b[0m '
-let built = {}
+const skip = '\x1b[33m×\x1b[0m '
 
-exports.html = function(json, out) {
+exports.html = function(out, json) {
   const pug = require('pug')
   const buildpage = pug.compileFile('pug/main.pug')
 
   const moment = require('moment')
   const markdownit = require('markdown-it')({breaks: true, linkify: true})
   const md = (text) => markdownit.renderInline(text || '').replace(/\r?\n|\r/g, '').replace(/<br><br>/g, '</p><p>')
-  const resize = (img, w, h) => exports.image(img, w, h, out)
+  const resize = (img, w, h) => path.join('resized', exports.media(path.join(out, 'resized'), img, w, h))
 
   let pages = _.union(_.clone(json.portfolio), [
     {id: '404', title: json.flavor.error.title, summary: json.flavor.error.details},
-    {id: 'index', banner: true}
+    {id: 'index', welcome: true}
   ])
 
   for ( let page of pages ) {
-    let html = buildpage({_: _, md: md, moment: moment, resize:resize, site: json, page: page})
+    let html = buildpage({_: _, md: md, moment: moment, resize: resize, site: json, page: page})
 
     fs.writeFileSync(path.join(out, page.id + '.html'), html, 'utf8')
     console.log(success + 'Written ' + page.id + '.html')
@@ -64,22 +64,46 @@ exports.assets = function(out) {
   })
 }
 
-exports.image = function(imgpath, width, height, out) {
-  const jimp = require('jimp')
+let lock = []
+exports.media = function(out, filepath, width, height) {
   const crypto = require('crypto')
 
-  let id = crypto.createHash('md5').update(imgpath + '?' + width + '?' + height).digest('hex')
-  let outname = path.join('resized', id + path.extname(imgpath))
+  let ext = path.extname(filepath)
+  let outname = crypto.createHash('md5').update(filepath + '?' + width + '?' + height).digest('hex') + ext
+  let displayname = outname + ' (' + filepath + ')'
+  let outpath = path.join(out, outname)
 
-  jimp.read(imgpath, (error, img) => {
-    if ( !built[outname] ) {
-      if (img)
-        img.cover(width, height).write(path.join(out, outname))
+  if ( lock[outpath] ) {
+    console.log(skip + 'skipped ' + displayname)
+  } else {
+    lock[outpath] = true
 
-      built[outname] = true
-      console.log((error && (fail + 'Failed to resize') || (success + 'Written ')) + outname + ' (' + imgpath + ')')
+    if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' ) {
+      require('jimp').read(filepath, (error, img) => {
+        if (img)
+          img.cover(width, height).write(outpath, error => {
+            console.log((error && (fail + 'Failed ') || (success + 'Written ')) + displayname)
+          })
+      })
+
+    } else if ( ext == '.webm' || ext == '.mp4' || ext == '.ogg' ) {
+      const ffmpeg = require('@ffmpeg-installer/ffmpeg')
+      const spawn = require('child_process').spawn
+
+      let cmd = spawn(ffmpeg.path, [
+        '-i',  filepath,
+        '-vf', 'scale=' + width + ':' + height + ':force_original_aspect_ratio=increase,crop=' + width + ':' + height,
+        '-an',
+        outpath
+      ])
+
+      cmd.stderr.on('data', data => cmd.stdin.write('y\n'))
+      cmd.on('exit', code => console.log((code != 0 && (fail + 'Failed ') || (success + 'Written ')) + displayname))
+
+    } else {
+      console.log(error + filepath + ' is not a supported image or video file format.')
     }
-  })
+  }
 
   return outname
 }

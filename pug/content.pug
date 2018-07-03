@@ -1,7 +1,7 @@
 mixin listEntry(entry)
   .col-2
     a.image.fit( href=entry.website )
-      +resizedimage(entry.picture || 'assets/placeholder.jpg', 217, 120)
+      +resizedimage(entry.picture || 'assets/placeholder.jpg', 217, 145)
     
   .col-10
     h4
@@ -28,9 +28,9 @@ mixin listEntry(entry)
           a(href= '/' + page.id)!= md(page.title)
         p!= md(page.summary)
         
-      if page.picture
+      if page.banner
         a.image.featured(href='#')   
-          +image(page.picture)
+          +image(page.banner)
 
       if page.details
         p!= md(page.details)

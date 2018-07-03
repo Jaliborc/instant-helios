@@ -11,8 +11,8 @@ body(itemtype="http://schema.org/Person")
   #page-wrapper
     include mixins.pug
     include header.pug
-    if page.banner
-      include banner.pug
+    if page.welcome
+      include welcome.pug
     if page.title
       include content.pug
     include carousel.pug

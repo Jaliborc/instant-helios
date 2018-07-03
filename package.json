@@ -20,6 +20,7 @@
     "test": "jshint build.js | node build"
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.15",
     "jimp": "^0.2.28",
     "markdown-it": "^8.4.1",
     "minimist": "^1.2.0",
