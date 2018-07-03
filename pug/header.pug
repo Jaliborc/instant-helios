@@ -1,13 +1,13 @@
-#header.is-preload(class = page.banner && 'homepage' || '')
+#header.is-preload(class = page.welcome && 'homepage' || '')
   #inner
-    if page.banner
+    if page.welcome
       header
         h1
           a#logo(href='/')= site.basics.name
         hr
         p= site.basics.label
       footer
-        a.button.circled.scrolly(href='#banner') About
+        a.button.circled.scrolly(href='#welcome') About
     else
       header
         h1

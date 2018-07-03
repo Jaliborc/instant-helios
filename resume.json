@@ -304,7 +304,7 @@
 			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
 			"startDate": "2013-05-01",
 			"endDate": "2013-10-01",
-			"picture": "http://jaliborc.com/images/research.jpg",
+			"picture": "http://jaliborc.com/images/research/prt-demo.jpg",
 			"website": "https://github.com/jaliborc/prt-demos",
 			"resources": [
 				{
@@ -502,8 +502,8 @@
 		{
 			"id": "research",
 			"title": "Research",
-			"picture": "images/eyemove-thumb.webm",
-			"banner": "../images/eyemove-460.webm",
+			"picture": "http://jaliborc.com/videos/eyemove-thumb.webm",
+			"banner": "http://jaliborc.com/videos/eyemove-460.webm",
 			"summary": "Scientific studies on computer graphics and animation",
 			"details": "My research interests include real-time and photorealistic rendering, facial reconstruction, skin deformations, data driven animation and procedural methods. My current research focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin.",
 			"content": [
@@ -525,8 +525,8 @@
 			"id": "wow",
 			"title": "World of Warcraft",
 			"category": "Open Source",
-			"picture": "images/addons-thumb.webm",
-			"banner": "../images/addons.webm",
+			"picture": "http://jaliborc.com/videos/addons-thumb.webm",
+			"banner": "http://jaliborc.com/videos/addons.webm",
 			"summary": "Third party plugins and open libraries for the famous game",
 			"details": "I am currently the developer of several major addons for World of Warcraft, one of the most famous and influential MMORPGs. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
 			"content": [
@@ -547,7 +547,7 @@
 			"title": "Other Projects",
 			"category": "Open Source",
 			"summary": "Open-source tools and small personal game projects",
-			"picture": "images/rushgun-thumb.mp4",
+			"picture": "http://jaliborc.com/videos/rushgun-thumb.mp4",
 			"content": [
 				{
 					"type": "projects",
@@ -559,7 +559,7 @@
 			"id": "volunteer",
 			"title": "Volunteer Work",
 			"summary": "Sites and web applications I volunteered to do",
-			"picture": "http://jaliborc.com/images/web.jpg",
+			"picture": "http://jaliborc.com/images/web/jali&mari.jpg",
 			"details": "Page content still in the works."
 		}
 	]
