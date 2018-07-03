@@ -19,12 +19,10 @@
 
 /* Header */
 
-	body.homepage {
+	#header.homepage {
 		&.is-preload {
-			#header {
-				&:after {
-					opacity: 0;
-				}
+			&:after {
+				opacity: 0;
 			}
 		}
 	}
