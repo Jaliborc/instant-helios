@@ -8,3 +8,7 @@ section.carousel
           h3
             a( href='/' + page.id )= page.title
         p!= md(page.summary)
+  .forward
+    +icon('arrow')
+  .backward
+    +icon('arrow')

@@ -193,7 +193,7 @@
 					"url": "https://www.cs.ubc.ca/node/51794"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Preview",
 					"url": "https://goo.gl/2mnKig"
 				},
@@ -308,12 +308,12 @@
 			"website": "https://github.com/jaliborc/prt-demos",
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://github.com/jaliborc/prt-demos"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Previews",
 					"url": "https://goo.gl/7sb6Ym"
 				}
@@ -333,22 +333,22 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://github.com/jaliborc/project-manager"
 				},
 				{
-					"type": "Binary",
+					"type": "binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/project-manager/releases"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Preview",
 					"url": "https://youtu.be/KVvpwLLQTT4"
 				},
 				{
-					"type": "Link",
+					"type": "link",
 					"name": "Sucessor",
 					"url": "https://www.github.com/jaliborc/upmod"
 				}
@@ -371,12 +371,12 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://www.github.com/flybeat-game/"
 				},
 				{
-					"type": "Binary",
+					"type": "binary",
 					"name": "Builds",
 					"url": "https://github.com/flybeat-game/flybeat/releases"
 				}
@@ -396,17 +396,17 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/mitsuba/"
 				},
 				{
-					"type": "Binary",
+					"type": "binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/mitsuba/releases"
 				},
 				{
-					"type": "Research",
+					"type": "research",
 					"name": "Related Research",
 					"url": "http://jaliborc.com/research#prtpose"
 				}
@@ -426,17 +426,17 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/rushgun"
 				},
 				{
-					"type": "Binary",
+					"type": "binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/rushgun/releases"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Preview",
 					"url": "https://youtu.be/MB-gdsrFPfU"
 				}
@@ -456,12 +456,12 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/rubberstack"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Preview",
 					"url": "https://youtu.be/4UOQAKPdBBE"
 				}
@@ -481,21 +481,76 @@
 			],
 			"resources": [
 				{
-					"type": "Github",
+					"type": "github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/democastle"
 				},
 				{
-					"type": "Binary",
+					"type": "binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/democastle/releases"
 				},
 				{
-					"type": "Video",
+					"type": "video",
 					"name": "Preview",
 					"url": "https://youtu.be/oKCe8hE4r5k"
 				}
 			]
+		},
+		{
+			"type": "wow-mod",
+			"name": "Bagnon",
+			"summary": "A complete replacement of the default inventory interface.",
+			"picture": "http://jaliborc.com/images/addons/small/bagnon.jpg",
+			"website": "https://wow.curseforge.com/projects/bagnon"
+		},
+		{
+			"type": "wow-mod",
+			"name": "OmniCC",
+			"summary": "Provides text countdowns to any element of the interface.",
+			"picture": "http://jaliborc.com/images/addons/small/omnicc.jpg",
+			"website": "https://wow.curseforge.com/projects/omni-cc"
+		},
+		{
+			"type": "wow-mod",
+			"name": "PetTracker",
+			"summary": "An authentic *pokedex* for combat pets and tamers.",
+			"picture": "http://jaliborc.com/images/addons/small/pettracker.jpg",
+			"website": "https://wow.curseforge.com/projects/pettracker"
+		},
+		{
+			"type": "wow-mod",
+			"name": "Scrap",
+			"summary": "Automatically sells all the items the user does not need to merchants.",
+			"picture": "http://jaliborc.com/images/addons/small/scrap.jpg",
+			"website": "https://wow.curseforge.com/projects/scrap"
+		},
+		{
+			"type": "wow-lib",
+			"name": "WoWUnit",
+			"summary": "Unit testing framework for World of Warcraft addons.",
+			"picture": "http://jaliborc.com/images/addons/small/wowunit.jpg",
+			"website": "https://github.com/jaliborc/wowunit"
+		},
+		{
+			"type": "wow-lib",
+			"name": "Sushi-3.0",
+			"summary": "An object oriented graphical user interface framework.",
+			"picture": "http://jaliborc.com/images/addons/small/sushi.jpg",
+			"website": "http://jaliborc.github.io/sushi-3.0"
+		},
+		{
+			"type": "wow-lib",
+			"name": "LibItemCache-1.1",
+			"summary": "Handles all the access to item information from multiple sources, including the server.",
+			"picture": "http://jaliborc.com/images/addons/small/libitemcache.jpg",
+			"website": "http://jaliborc.github.io/libitemcache-1.1/"
+		},
+		{
+			"type": "wow-lib",
+			"name": "LibItemSearch-1.2",
+			"summary": "A client side search engine for World of Warcraft items.",
+			"website": "https://github.com/jaliborc/libitemsearch-1.2"
 		}
 	],
 	"portfolio": [
@@ -528,7 +583,7 @@
 			"picture": "http://jaliborc.com/videos/addons-thumb.webm",
 			"banner": "http://jaliborc.com/videos/addons.webm",
 			"summary": "Third party plugins and open libraries for the famous game",
-			"details": "I am currently the developer of several major addons for World of Warcraft, one of the most famous and influential MMORPGs. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
+			"details": "I am the developer of several major addons for World of Warcraft, one of the most famous and influential massively multiplayer online role-playing games of all time. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
 			"content": [
 				{
 					"type": "chapter",
@@ -539,6 +594,37 @@
 					"type": "chapter",
 					"title": "Personal Path",
 					"text": "Making addons was my very first step into programming and computer science, when I was 13 years old. At the time, the great majority of addons were not very complex and the market far from profitable. For instance, my addon Scrap was the first junk seller to have an actual interface (others were configured using the command line) and the first addon to have in-game tutorials. The last latter became a common practice of the game developer, which now provides in-game tutorials for new interface elements it incorporates.\n\nNot all the addons I have created are still being maintained. Some became unecessary, while others had to be dropped to make time for other more popular projects. Two examples I want to highlight are Bongos Cornucopia and Cornucopia. The latter is one of the addons I am most proud of, although it never had much commercial success."
+				},
+				{
+					"type": "chapter",
+					"title": "Most Popular",
+					"text": "These addons alone account for more than 43 million downloads.",
+					"secondary": true
+				},
+				{
+					"type": "projects",
+					"filter": "wow-mod",
+					"secondary": true
+				},
+				{
+					"type": "profile",
+					"network": "Curse",
+					"secondary": true
+				},
+				{
+					"type": "break",
+					"secondary": true
+				},
+				{
+					"type": "chapter",
+					"title": "Noteworthy Tools & Libraries",
+					"text": "A small selection of publicly available tools I find relevant to mention.",
+					"secondary": true
+				},
+				{
+					"type": "projects",
+					"filter": "wow-lib",
+					"secondary": true
 				}
 			]
 		},

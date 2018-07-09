@@ -76,7 +76,7 @@ exports.media = function(out, filepath, width, height) {
   if ( lock[outpath] ) {
     console.log(skip + 'skipped ' + displayname)
   } else {
-    lock[outpath] = true
+    /*lock[outpath] = true
 
     if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' ) {
       require('jimp').read(filepath, (error, img) => {
@@ -102,7 +102,7 @@ exports.media = function(out, filepath, width, height) {
 
     } else {
       console.log(error + filepath + ' is not a supported image or video file format.')
-    }
+    }*/
   }
 
   return outname

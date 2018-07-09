@@ -62,8 +62,8 @@
 		$('.carousel').each(function() {
 
 			var	$t = $(this),
-				$forward = $('<span class="forward"></span>'),
-				$backward = $('<span class="backward"></span>'),
+				$forward = $t.children('.forward'),
+				$backward = $t.children('.backward'),
 				$reel = $t.children('.reel'),
 				$items = $reel.children('article');
 
@@ -120,7 +120,6 @@
 
 			// Forward.
 				$forward
-					.appendTo($t)
 					.hide()
 					.mouseenter(function(e) {
 						timerId = window.setInterval(function() {
@@ -141,7 +140,6 @@
 
 			// Backward.
 				$backward
-					.appendTo($t)
 					.hide()
 					.mouseenter(function(e) {
 						timerId = window.setInterval(function() {

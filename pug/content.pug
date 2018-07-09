@@ -1,9 +1,9 @@
 mixin listEntry(entry)
-  .col-2
+  .minor
     a.image.fit( href=entry.website )
       +resizedimage(entry.picture || 'assets/placeholder.jpg', 217, 145)
     
-  .col-10
+  .major
     h4
       a( href=entry.website )= entry.name
         if entry.keywords
@@ -18,51 +18,86 @@ mixin listEntry(entry)
             a( href=item.url )
               +icon( item.type.toLowerCase() )
               = item.name
-              
+      
+mixin contentSection(section)
+    case section.type.toLowerCase()
+      when 'break'
+        hr
+          
+      when 'chapter'
+        section
+          header
+            h3= section.title
+          p!= md(section.text)
+      
+      when 'profile'
+        - let network = section.network.toLowerCase()
+        - let profile = _.find(site.basics.profiles, p => p.network.toLowerCase() == network)
+        
+        if profile
+          footer
+            a.button( href=profile.url )
+              +icon(network)
+              ='More on ' + section.network
+
+      when 'publications'
+        section.row.gtr-50
+          for article in site.publications
+            +listEntry(article)
+              .line
+                if article.summary
+                  = article.summary + ', '
+                = article.publisher
+              .line
+                if article.releaseDate
+                  i= 'Published ' + moment(article.releaseDate).format('MMMM YYYY')
+                else
+                  i= 'TBA'
+                
+      when 'projects'
+        section.row.gtr-50
+          - let filter = section.filter.toLowerCase()
+          - let filtered = _.filter(site.projects, p => p.type.toLowerCase() == filter)
+          
+          for project in filtered
+            +listEntry(project)
+              if project.organization
+                .line= project.organization
+              if project.summary
+                .line!= md(project.summary)
+              if project.startDate
+                .line
+                  i
+                    +period(project.startDate, project.endDate)
 
 .wrapper.style1
   .container
-    article#main.special
-      header
-        h2
-          a(href= '/' + page.id)!= md(page.title)
-        p!= md(page.summary)
-        
-      if page.banner
-        a.image.featured(href='#')   
-          +image(page.banner)
-
-      if page.details
-        p!= md(page.details)
+    .row.gtr-200
+      - let sidebar = _.some(page.content || [], s => s.secondary)
       
-      if page.content
-        for section in page.content
-          section
-            case section.type
-              when 'chapter'
-                header
-                  h3= section.title
-                p!= md(section.text)
-  
-              when 'publications'
-                .row.gtr-50
-                  for article in site.publications
-                    +listEntry(article)
-                      .line
-                        if article.summary
-                          = article.summary + ', '
-                        = article.publisher
-                      .line
-                        i= 'Published ' + moment(article.releaseDate).format('MMMM YYYY')
-                        
-              when 'projects'
-                .row.gtr-50
-                  for project in _.filter(site.projects, p => p.type == section.filter)
-                    +listEntry(project)
-                      if project.organization
-                        .line= project.organization
-                      if project.summary
-                        .line!= md(project.summary)
-                      .line
-                        i
-                          +period(project.startDate, project.endDate)
+      #content.col-12-mobile( class=sidebar && 'col-8' || 'col-12' )
+        article.special
+          header
+            h2
+              a(href= '/' + page.id)!= md(page.title)
+            p!= md(page.summary)
+            
+          if page.banner
+            a.image.featured(href='#')   
+              +image(page.banner)
+
+          if page.details
+            p!= md(page.details)
+          
+          if page.content
+            for section in page.content
+              if !section.secondary
+                +contentSection(section)
+                              
+      if sidebar
+        #sidebar.col-4.col-12-mobile
+          article
+            hr
+            for section in page.content
+              if section.secondary
+                +contentSection(section)

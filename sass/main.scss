@@ -306,12 +306,12 @@
 /* Sections/Article */
 
 	section, article {
-		margin-bottom: 3em;
+		/*margin-bottom: 3em;
 
 		> :last-child,
 		&:last-child {
 			margin-bottom: 0;
-		}
+		}*/
 
 		&.special > {
 			header, footer {
@@ -646,6 +646,11 @@
 		font-weight: 300;
 		@include vendor('transition', ('background-color 0.35s ease-in-out', 'color 0.35s ease-in-out', 'border-bottom-color 0.35s ease-in-out'));
 
+		svg {
+			margin-right: 0.5em;
+			margin-left: -0.5em;
+		}
+
 		&:hover {
 			color: #fff;
 			background: #ef8376;
@@ -727,7 +732,7 @@
 		    border-radius: .25rem;
 		}
 
-/* Clock */
+/* Clocks */
 
 	.clock {
 		display: inline;
@@ -1025,41 +1030,52 @@
 
 /* Content */
 
-	#content {
-		> hr {
-			top: 3em;
-			margin-bottom: 6em;
-		}
+	#content, #sidebar {
+		article > {
+			hr {
+				top: 3em;
+				margin-bottom: 6em;
 
-		> section {
-			margin-bottom: 0;
-		}
-	}
+				&:first-child {
+					display: none;
+				}
+			}
 
-/* Sidebar */
+			section {
+				margin-top: 3em;
 
-	#sidebar > {
-		hr {
-			top: 3em;
-			margin-bottom: 6em;
-
-			&.first {
-				display: none;
+				&.gtr-50 {
+					margin-top: -.5em;
+				}
 			}
 		}
+	}
 
-		section {
-			margin-bottom: 0;
+	#content {
+		.row {
+			.major {
+				@extend .col-10;
+			}
+
+			.minor {
+				@extend .col-2;
+			}
 		}
 	}
 
-/* Main */
-
-	#main {
-		margin-bottom: 0;
-
+	#sidebar {
 		section:first-of-type {
-			padding-top: 2em;
+			margin-top: 0;
+		}
+
+		.row {
+			.major {
+				@extend .col-8;
+			}
+
+			.minor {
+				@extend .col-4;
+			}
 		}
 	}
 
@@ -1127,6 +1143,16 @@
 			margin-top: -6em;
 			cursor: pointer;
 
+			svg {
+				width: 3em;
+				height: 3em;
+				position: absolute;
+				font-size: 0.8em;
+				top: 50%;
+				margin: -1.5em 0 0 0;
+				color: #fff;
+			}
+
 			&:before {
 				content: '';
 				display: block;
@@ -1145,16 +1171,6 @@
 				-webkit-backface-visibility: hidden;
 			}
 
-			&:after {
-				content: '';
-				width: 3em;
-				height: 3em;
-				position: absolute;
-				top: 50%;
-				margin: -1.5em 0 0 0;
-				background: url('images/arrow.svg') no-repeat center center;
-			}
-
 			&:hover {
 				&:before {
 					background-color: rgba(239, 131, 118, 0.75);
@@ -1165,25 +1181,25 @@
 		.forward {
 			right: 0;
 
-			&:before {
-				right: -3em;
+			svg {
+				right: -0.25em;
 			}
 
-			&:after {
-				right: -0.25em;
+			&:before {
+				right: -3em;
 			}
 		}
 
 		.backward {
 			left: 0;
 
-			&:before {
-				left: -3em;
-			}
-
-			&:after {
+			svg {
 				left: -0.25em;
 				@include vendor('transform', 'scaleX(-1)');
+			}
+
+			&:before {
+				left: -3em;
 			}
 		}
 
