@@ -108,7 +108,7 @@
 			"endDate": "2017-08-01",
 			"summary": "Unintentionally started own business at the age of 13, developing third party software for the game World of Warcraft.",
 			"highlights": [
-				"Over 50 million total downloads.",
+				"Over 90 million downloads.",
 				"Created more than 20 different projects."
 			],
 			"website": "http://jaliborc.com/wow",
@@ -193,7 +193,7 @@
 					"url": "https://www.cs.ubc.ca/node/51794"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Preview",
 					"url": "https://goo.gl/2mnKig"
 				},
@@ -289,7 +289,7 @@
 
 	"projects": [
 		{
-			"type": "research",
+			"type": "Research",
 			"name": "Facial Reconstruction using Single Light-Field Image",
 			"authors": "João Cardoso, Nuno Gonçalves",
 			"organization": "Institute of Systems and Robotics, University of Coimbra",
@@ -298,7 +298,7 @@
 			"picture": "http://jaliborc.com/images/research/isr.jpg"
 		},
 		{
-			"type": "research",
+			"type": "Research",
 			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
 			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
 			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
@@ -308,19 +308,19 @@
 			"website": "https://github.com/jaliborc/prt-demos",
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://github.com/jaliborc/prt-demos"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Previews",
 					"url": "https://goo.gl/7sb6Ym"
 				}
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "Project Manager",
 			"summary": "Outdated tool to automate uploading [World of Warcraft](http://jaliborc.com/wow) addon builds to the defunct [Curse.com](http://www.curse.com/)",
 			"startDate": "2010-02-01",
@@ -333,17 +333,17 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://github.com/jaliborc/project-manager"
 				},
 				{
-					"type": "binary",
+					"type": "Binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/project-manager/releases"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Preview",
 					"url": "https://youtu.be/KVvpwLLQTT4"
 				},
@@ -355,7 +355,7 @@
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "FlyBeat",
 			"authors": "João Cardoso , Andre Baptista, Rui Casaleiro",
 			"summary": "A PC game in the style of [Audio Surf](http://www.audio-surf.com/) but fully 3D and with cellphones as optional controllers",
@@ -371,19 +371,19 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://www.github.com/flybeat-game/"
 				},
 				{
-					"type": "binary",
+					"type": "Binary",
 					"name": "Builds",
 					"url": "https://github.com/flybeat-game/flybeat/releases"
 				}
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "Mitsuba Extension",
 			"summary": "Allows [Mitsuba](https://www.mitsuba-renderer.org/) to render per-vertex data and use environment maps of spherical harmonics as light sources",
 			"startDate": "2013-06-01",
@@ -396,24 +396,24 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/mitsuba/"
 				},
 				{
-					"type": "binary",
+					"type": "Binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/mitsuba/releases"
 				},
 				{
-					"type": "research",
+					"type": "Research",
 					"name": "Related Research",
 					"url": "http://jaliborc.com/research#prtpose"
 				}
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "Rush Gun",
 			"summary": "Simple game done in 1 day when applying to [DeltaEngine](https://www.deltaengine.net/) to show knowledge of C#",
 			"startDate": "2012-05-22",
@@ -426,24 +426,24 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/rushgun"
 				},
 				{
-					"type": "binary",
+					"type": "Binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/rushgun/releases"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Preview",
 					"url": "https://youtu.be/MB-gdsrFPfU"
 				}
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "Rubber Stack",
 			"summary": "My first experiment working with Unity",
 			"startDate": "2012-04-12",
@@ -456,19 +456,19 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/rubberstack"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Preview",
 					"url": "https://youtu.be/4UOQAKPdBBE"
 				}
 			]
 		},
 		{
-			"type": "opensource",
+			"type": "OpenSource",
 			"name": "Demo Castle",
 			"summary": "My first experiment working with 3D graphics",
 			"startDate": "2010-11-01",
@@ -481,73 +481,73 @@
 			],
 			"resources": [
 				{
-					"type": "github",
+					"type": "Github",
 					"name": "Source",
 					"url": "https://www.github.com/jaliborc/democastle"
 				},
 				{
-					"type": "binary",
+					"type": "Binary",
 					"name": "Builds",
 					"url": "https://www.github.com/jaliborc/democastle/releases"
 				},
 				{
-					"type": "video",
+					"type": "Video",
 					"name": "Preview",
 					"url": "https://youtu.be/oKCe8hE4r5k"
 				}
 			]
 		},
 		{
-			"type": "wow-mod",
+			"type": "WoWMod",
 			"name": "Bagnon",
 			"summary": "A complete replacement of the default inventory interface.",
 			"picture": "http://jaliborc.com/images/addons/small/bagnon.jpg",
 			"website": "https://wow.curseforge.com/projects/bagnon"
 		},
 		{
-			"type": "wow-mod",
+			"type": "WoWMod",
 			"name": "OmniCC",
 			"summary": "Provides text countdowns to any element of the interface.",
 			"picture": "http://jaliborc.com/images/addons/small/omnicc.jpg",
 			"website": "https://wow.curseforge.com/projects/omni-cc"
 		},
 		{
-			"type": "wow-mod",
+			"type": "WoWMod",
 			"name": "PetTracker",
 			"summary": "An authentic *pokedex* for combat pets and tamers.",
 			"picture": "http://jaliborc.com/images/addons/small/pettracker.jpg",
 			"website": "https://wow.curseforge.com/projects/pettracker"
 		},
 		{
-			"type": "wow-mod",
+			"type": "WoWMod",
 			"name": "Scrap",
 			"summary": "Automatically sells all the items the user does not need to merchants.",
 			"picture": "http://jaliborc.com/images/addons/small/scrap.jpg",
 			"website": "https://wow.curseforge.com/projects/scrap"
 		},
 		{
-			"type": "wow-lib",
+			"type": "WoWLib",
 			"name": "WoWUnit",
 			"summary": "Unit testing framework for World of Warcraft addons.",
 			"picture": "http://jaliborc.com/images/addons/small/wowunit.jpg",
 			"website": "https://github.com/jaliborc/wowunit"
 		},
 		{
-			"type": "wow-lib",
+			"type": "WoWLib",
 			"name": "Sushi-3.0",
 			"summary": "An object oriented graphical user interface framework.",
 			"picture": "http://jaliborc.com/images/addons/small/sushi.jpg",
 			"website": "http://jaliborc.github.io/sushi-3.0"
 		},
 		{
-			"type": "wow-lib",
+			"type": "WoWLib",
 			"name": "LibItemCache-1.1",
 			"summary": "Handles all the access to item information from multiple sources, including the server.",
 			"picture": "http://jaliborc.com/images/addons/small/libitemcache.jpg",
 			"website": "http://jaliborc.github.io/libitemcache-1.1/"
 		},
 		{
-			"type": "wow-lib",
+			"type": "WoWLib",
 			"name": "LibItemSearch-1.2",
 			"summary": "A client side search engine for World of Warcraft items.",
 			"website": "https://github.com/jaliborc/libitemsearch-1.2"
@@ -598,17 +598,17 @@
 				{
 					"type": "chapter",
 					"title": "Most Popular",
-					"text": "These addons alone account for more than 43 million downloads.",
+					"text": "These addons alone account for more than 70 million downloads.",
 					"secondary": true
 				},
 				{
 					"type": "projects",
-					"filter": "wow-mod",
+					"filter": "wowmod",
 					"secondary": true
 				},
 				{
 					"type": "profile",
-					"network": "Curse",
+					"network": "curse",
 					"secondary": true
 				},
 				{
@@ -623,7 +623,12 @@
 				},
 				{
 					"type": "projects",
-					"filter": "wow-lib",
+					"filter": "wowlib",
+					"secondary": true
+				},
+				{
+					"type": "profile",
+					"network": "github",
 					"secondary": true
 				}
 			]
@@ -634,6 +639,7 @@
 			"category": "Open Source",
 			"summary": "Open-source tools and small personal game projects",
 			"picture": "http://jaliborc.com/videos/rushgun-thumb.mp4",
+			"details": "Most of my relevant work, apart from [World of Wacraft](/wow) mods, is not open source nor available for distribution. Yet, over the years I did do some tiny game projects for fun and developed some tools for personal use I am happy to share. As intended for personal use, keep in mind it was not written with long-term usability in mind.",
 			"content": [
 				{
 					"type": "projects",
