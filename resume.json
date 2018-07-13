@@ -1,574 +1,213 @@
 {
-	"basics": {
-		"name": "João Cardoso",
-		"label": "Software Engineer / CG Researcher",
-		"email": "fake@email.com",
-		"website": "http://jaliborc.com",
-		"resume": "http://jaliborc.com/resume",
-		"summary": "My recent work focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin. Outside of work, I am primarily known for being the developer of several major addons (third party software) for World of Warcraft, with millions of downloads worldwide. I started programming at a young age and since then I conciliated work with studies.",
-		"location": {
-			"city": "Coimbra",
-			"countryCode": "PT",
-			"region": "Coimbra"
-		},
-		"profiles": [
-			{
-				"network": "GitHub",
-				"username": "jaliborc",
-				"url": "https://github.com/jaliborc"
-			},
-			{
-				"network": "Curse",
-				"username": "jaliborc",
-				"url": "https://curseforge.com/members/jaliborc/projects"
-			},
-			{
-				"network": "LinkedIn",
-				"username": "jaliborc",
-				"url": "https://linkedin.com/in/jaliborc/"
-			}
-		]
-	},
+  "basics": {
+    "name": "Richard Hendriks",
+    "label": "Programmer",
+    "picture": null,
+    "email": "richard.hendriks@mail.com",
+    "phone": "(912) 555-4321",
+    "website": "http://richardhendricks.com",
+    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "neutralthoughts",
+        "url": ""
+      },
+      {
+        "network": "GitHub",
+        "username": "dandymusicnl",
+        "url": "https://github.com/dandymusicnl"
+      }
+    ]
+  },
 	"flavor": {
 		"welcome": {
-			"title": "Hi. I am **João Cardoso**.",
-			"details": "In this site you will find a small selection of my work and get to know a little about me."
+			"title": "Hi. I am **Richard Hendriks**.",
+			"details": "In this site you will get to know a little about me and read about my personal projects."
 		},
 		"contact": {
-			"title": "Looking for more information?",
-			"details": "You'll find source code and some of my projects online in some of these websites.\nFor bug reports or feature requests, please do not email me directly."
+			"title": "Looking to find me online?",
+			"details": "I am a frequent user at these social networks."
 		},
 		"error": {
-			"title": "**Area 404.** How did you get here?",
-			"details": "This page does not exist. It was either removed, moved... ah... I mean... it never existed!\nGo back where you came from. And do not come back."
+			"title": "**Error 404.** Page not found",
+			"details": "This page doesn't exist. it might have been moved, or you might have typed the address incorrectly."
 		}
 	},
 
-	"work": [
-		{
-			"position": "Computer Vision Researcher",
-			"startDate": "2017-02-01",
-			"endDate": "2018-04-01",
-			"summary": "Project funded by the INCM, institution responsible for emission of official documents for several countries, to print 3D holograms of citizen faces in citizenship cards.",
-			"highlights": [
-				"Researched facial reconstruction using light-field cameras.",
-				"Implemented a system that generates 3D models and ready to burn laser holograms from single light field photographs, with both an automated API and a manual user friendly interface."
-			],
-			"website": "https://www.isr.uc.pt/",
-			"company": "Institute of Systems and Robotics"
-		},
-		{
-			"position": "Teaching and Research Assistant",
-			"startDate": "2014-09-01",
-			"endDate": "2016-11-01",
-			"summary": "Full-time job offered to eligible computer science students at the University of British Columbia, to pay for tuition and living costs.",
-			"highlights": [
-				"Researched at Sensorimotor System Lab.",
-				"Taught CPCS 314: Computer Graphics."
-			],
-			"website": "https://www.ubc.ca/",
-			"company": "University of British Columbia"
-		},
-		{
-			"position": "Undergraduate Researcher",
-			"startDate": "2013-05-01",
-			"endDate": "2013-09-01",
-			"summary": "My work on an undergraduate course served as the starting point of a research project at the Computer Animation and Interaction Capture Lab, supervised by professors Paul Kry (McGill) and Derek Nowrouzezahrai (Université de Montreal).",
-			"website": "https://www.mcgill.ca/",
-			"company": "McGill University"
-		},
-		{
-			"position": "Software Engineer Intern",
-			"startDate": "2012-08-01",
-			"endDate": "2012-11-01",
-			"summary": "A game engine that allows to bring .NET games into a vast multitude of platforms, such as Android, iOS and HTML5.",
-			"highlights": [
-				"Implemented the first versions of the C++ port of the engine.",
-				"Developed a system for automatic conversion of games in C# into C++."
-			],
-			"website": "https://www.deltaengine.net/",
-			"company": "DeltaEngine"
-		},
-		{
-			"position": "Technical Specialist",
-			"startDate": "2012-04-01",
-			"endDate": "2013-04-01",
-			"summary": "Weekly opinion article on the homepage of what was, at the time, a gaming news website.",
-			"highlights": [
-				"Selected and written articles on open source gaming software.",
-				"Performed interviews with the developers of spotlighted software.",
-				"Worked with the product manager, lead editor and the video team to ensure new items were published on a weakly basis."
-			],
-			"website": "https://www.curse.com/",
-			"company": "Curse Entertainment"
-		},
-		{
-			"position": "Open Source Developer",
-			"startDate": "2006-08-01",
-			"endDate": "2017-08-01",
-			"summary": "Unintentionally started own business at the age of 13, developing third party software for the game World of Warcraft.",
-			"highlights": [
-				"Over 90 million downloads.",
-				"Created more than 20 different projects."
-			],
-			"website": "http://jaliborc.com/wow",
-			"company": "Self-Employed"
-		}
-	],
-	"education": [
-		{
-			"institution": "University of British Columbia",
-			"area": "Computer Science",
-			"studyType": "Masters",
-			"startDate": "2014-09-01",
-			"endDate": "2016-11-01",
-			"gpa": "81.7%"
-		},
-		{
-			"institution": "McGill University",
-			"area": "Computer Science",
-			"studyType": "Exchange",
-			"startDate": "2013-01-01",
-			"endDate": "2013-05-01",
-			"gpa": "3.67 GPA"
-		},
-		{
-			"institution": "University of Coimbra",
-			"area": "Computer Science",
-			"studyType": "Bachelor",
-			"startDate": "2011-09-01",
-			"endDate": "2014-06-01",
-			"gpa": "16/20"
-		},
-		{
-			"institution": "Music Conservatory of Coimbra",
-			"area": "Classical Guitar",
-			"studyType": "Professional Certification",
-			"startDate": "2002-09-01",
-			"endDate": "2011-06-01",
-			"gpa": "15/20"
-		}
-	],
-	"awards": [
-		{
-			"title": "Best Paper Award",
-			"date": "2016-07-22",
-			"awarder": "ACM Web3D '16"
-		},
-		{
-			"title": "Computer Science Merit Award",
-			"date": "2014-09-01",
-			"awarder": "University of British Columbia"
-		},
-		{
-			"title": "3% Best Student Award",
-			"date": "2012-12-01",
-			"awarder": "University of Coimbra"
-		},
-		{
-			"title": "EU - Canada Transatlantic Exchange Program Partnerships Scholarship",
-			"date": "2012-06-01",
-			"awarder": "European Commission"
-		}
-	],
-	"publications": [
-		{
-			"name": "Interactive Animation of the Eye Region",
-			"publisher": "University of British Columbia",
-			"releaseDate": "2016-09-22",
-			"summary": "Master Thesis",
-			"picture": "http://jaliborc.com/images/research/mscthesis.jpg",
-			"website": "https://goo.gl/i4Vq5L"
-		},
-		{
-			"name": "Interactive Gaze Driven Animation of the Eye Region",
-			"publisher": "ACM Web3D '16 Proceedings of the 21st International Conference on Web3D Technology",
-			"releaseDate": "2016-07-22",
-			"picture": "http://jaliborc.com/images/research/eyemove2.jpg",
-			"website": "http://www.cs.ubc.ca/research/eyemoveweb3d16/",
-			"resources": [
-				{
-					"type": "Award",
-					"name": "Best Paper Award",
-					"url": "https://www.cs.ubc.ca/node/51794"
-				},
-				{
-					"type": "Video",
-					"name": "Preview",
-					"url": "https://goo.gl/2mnKig"
-				},
-				{
-					"type": "HTML5",
-					"name": "Online Demo",
-					"url": "https://goo.gl/aJZnqZ"
-				}
-			]
-		},
-		{
-			"name": "Gaze Driven Animation of Eyes",
-			"publisher": "ACM SIGGRAPH/Eurographics Symposium on Computer Animation 2015",
-			"releaseDate": "2015-08-09",
-			"picture": "http://jaliborc.com/images/research/eyemove.jpg",
-			"website": "https://dl.acm.org/citation.cfm?id=2795140"
-		},
-		{
-			"name": "Error Analysis of Precomputed Radiance Transfer for Deforming Geometry",
-			"publisher": "McGill University",
-			"releaseDate": "2013-07-14",
-			"summary": "Undergraduate Research Project",
-			"picture": "http://jaliborc.com/images/research/prt-early.jpg",
-			"website": "http://jaliborc.com/downloads/prt-early.pdf"
-		}
-	],
-	"skills": [
-		{
-			"name": "Programming Languages",
-			"keywords": [
-				"Lua",
-				"Python",
-				"Javascript",
-				"C++",
-				"C#",
-				"Matlab"
-			],
-			"type": "Prefered"
-		},
-		{
-			"name": "Rendering",
-			"keywords": [
-				"OpenGL and WebGL",
-				"Reflectance Models",
-				"Screen Space Computations",
-				"Physically Based Light Transport",
-				"Spherical Harmonics",
-				"Area Lights"
-			],
-			"type": "Speciality"
-		},
-		{
-			"name": "Machine Learning",
-			"keywords": [
-				"Dimensionality Reduction",
-				"Nonlinear Regression",
-				"Clustering",
-				"Unsupervised Learning",
-				"Classification"
-			],
-			"type": "Proficient"
-		},
-		{
-			"name": "Computer Vision",
-			"keywords": [
-				"3D Reconstruction",
-				"Light Fields",
-				"Noise Removal",
-				"Background Detection"
-			],
-			"type": "Experienced"
-		},
-		{
-			"name": "Other",
-			"keywords": [
-				"UI Development",
-				"Web Development",
-				"UX"
-			],
-			"type": "Proficient"
-		}
-	],
-	"languages": [
-		{
-			"language": "English",
-			"fluency": "Native speaker"
-		},
-		{
-			"language": "Portuguese",
-			"fluency": "Native speaker"
-		}
-	],
+  "work": [
+    {
+      "company": "Pied Piper",
+      "position": "CEO/President",
+      "website": "http://piedpiper.com",
+      "startDate": "2013-12-01",
+      "endDate": "2014-12-01",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CoderDojo",
+      "position": "Teacher",
+      "website": "http://coderdojo.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Teacher of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Oklahoma",
+      "area": "Information Technology",
+      "studyType": "Bachelor",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01",
+      "gpa": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "CS2011 - Java Introduction"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Digital Compression Pioneer Award",
+      "date": "2014-11-01",
+      "awarder": "Techcrunch",
+      "summary": "There is no spoon."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Video compression for 3d media",
+      "publisher": "Hooli",
+      "releaseDate": "2014-10-01",
+      "website": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Compression",
+      "level": "Master",
+      "keywords": [
+        "Mpeg",
+        "MP4",
+        "GIF"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Erlich Bachman",
+      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    }
+  ],
 
 	"projects": [
 		{
-			"type": "Research",
-			"name": "Facial Reconstruction using Single Light-Field Image",
-			"authors": "João Cardoso, Nuno Gonçalves",
-			"organization": "Institute of Systems and Robotics, University of Coimbra",
-			"startDate": "2017-02-01",
-			"endDate": "2018-05-01",
-			"picture": "http://jaliborc.com/images/research/isr.jpg"
+			"type": "opensource",
+			"name": "Chickens on Wheels",
+			"authors": "Richard Hendriks",
+			"summary": "Finds images of chickens riding roller skaters online.",
+			"website": "http://chickenwheels.io",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic02.jpg",
+			"startDate": "2013-02-01",
+			"endDate": "2014-05-01"
 		},
 		{
-			"type": "Research",
-			"name": "Precomputed Radiance Transfer for Geometry with Pose Varying Subsurface Properties",
-			"authors": "João Cardoso, Marc Jarvis, Sheldon Andrews, Simon Labute, Paul Kry, Derek Nowrouzezahrai",
-			"organization": "Computer Animation and Interaction Capture Lab, McGill University",
+			"type": "opensource",
+			"name": "Hendriks & Hendriks",
+			"authors": "Richard Hendriks, Anthony Hendriks",
+			"summary": "A blog where me and my brother write our daily thoughs.",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic03.jpg",
+			"website": "http://doublehendriks.com",
+			"startDate": "2014-06-01"
+		},
+		{
+			"type": "research",
+			"name": "Stochastic Banana Bread",
+			"authors": "Richard Hendriks, Lord Sandwitch, Banana Senior",
+			"organization": "Banana Bread Society",
 			"startDate": "2013-05-01",
 			"endDate": "2013-10-01",
-			"picture": "http://jaliborc.com/images/research/prt-demo.jpg",
-			"website": "https://github.com/jaliborc/prt-demos",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic04.jpg",
+			"website": "https://en.wikipedia.org/wiki/Banana_bread",
 			"resources": [
 				{
 					"type": "Github",
 					"name": "Source",
-					"url": "https://github.com/jaliborc/prt-demos"
+					"url": ""
 				},
 				{
 					"type": "Video",
 					"name": "Previews",
-					"url": "https://goo.gl/7sb6Ym"
+					"url": "https://www.google.com/search?q=banana+bread"
 				}
 			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "Project Manager",
-			"summary": "Outdated tool to automate uploading [World of Warcraft](http://jaliborc.com/wow) addon builds to the defunct [Curse.com](http://www.curse.com/)",
-			"startDate": "2010-02-01",
-			"endDate": "2016-07-01",
-			"picture": "http://jaliborc.com/images/other/projectmanager.jpg",
-			"website": "https://github.com/jaliborc/project-manager",
-			"keywords": [
-				"Python",
-				"wxWidgets"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://github.com/jaliborc/project-manager"
-				},
-				{
-					"type": "Binary",
-					"name": "Builds",
-					"url": "https://www.github.com/jaliborc/project-manager/releases"
-				},
-				{
-					"type": "Video",
-					"name": "Preview",
-					"url": "https://youtu.be/KVvpwLLQTT4"
-				},
-				{
-					"type": "link",
-					"name": "Sucessor",
-					"url": "https://www.github.com/jaliborc/upmod"
-				}
-			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "FlyBeat",
-			"authors": "João Cardoso , Andre Baptista, Rui Casaleiro",
-			"summary": "A PC game in the style of [Audio Surf](http://www.audio-surf.com/) but fully 3D and with cellphones as optional controllers",
-			"startDate": "2014-02-17",
-			"endDate": "2014-07-17",
-			"picture": "http://jaliborc.com/images/other/flybeat.jpg",
-			"website": "https://www.github.com/flybeat-game/",
-			"keywords": [
-				"ActionScript",
-				"Away3D",
-				"Java",
-				"Matlab"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://www.github.com/flybeat-game/"
-				},
-				{
-					"type": "Binary",
-					"name": "Builds",
-					"url": "https://github.com/flybeat-game/flybeat/releases"
-				}
-			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "Mitsuba Extension",
-			"summary": "Allows [Mitsuba](https://www.mitsuba-renderer.org/) to render per-vertex data and use environment maps of spherical harmonics as light sources",
-			"startDate": "2013-06-01",
-			"endDate": "2013-09-01",
-			"picture": "http://www.mitsuba-renderer.org/~wenzel/images/mitsuba_logo@2x.jpg",
-			"website": "https://www.github.com/jaliborc/mitsuba",
-			"keywords": [
-				"C++",
-				"Mitsuba"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://www.github.com/jaliborc/mitsuba/"
-				},
-				{
-					"type": "Binary",
-					"name": "Builds",
-					"url": "https://www.github.com/jaliborc/mitsuba/releases"
-				},
-				{
-					"type": "Research",
-					"name": "Related Research",
-					"url": "http://jaliborc.com/research#prtpose"
-				}
-			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "Rush Gun",
-			"summary": "Simple game done in 1 day when applying to [DeltaEngine](https://www.deltaengine.net/) to show knowledge of C#",
-			"startDate": "2012-05-22",
-			"endDate": "2012-05-23",
-			"picture": "http://jaliborc.com/images/other/rushgun.jpg",
-			"website": "https://www.github.com/jaliborc/rushgun",
-			"keywords": [
-				"C#",
-				"Unity"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://www.github.com/jaliborc/rushgun"
-				},
-				{
-					"type": "Binary",
-					"name": "Builds",
-					"url": "https://www.github.com/jaliborc/rushgun/releases"
-				},
-				{
-					"type": "Video",
-					"name": "Preview",
-					"url": "https://youtu.be/MB-gdsrFPfU"
-				}
-			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "Rubber Stack",
-			"summary": "My first experiment working with Unity",
-			"startDate": "2012-04-12",
-			"endDate": "2012-04-13",
-			"picture": "http://jaliborc.com/images/other/rubberstack.jpg",
-			"website": "https://www.github.com/jaliborc/rubberstack",
-			"keywords": [
-				"Boo (C# variant)",
-				"Unity"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://www.github.com/jaliborc/rubberstack"
-				},
-				{
-					"type": "Video",
-					"name": "Preview",
-					"url": "https://youtu.be/4UOQAKPdBBE"
-				}
-			]
-		},
-		{
-			"type": "OpenSource",
-			"name": "Demo Castle",
-			"summary": "My first experiment working with 3D graphics",
-			"startDate": "2010-11-01",
-			"endDate": "2010-11-20",
-			"picture": "http://jaliborc.com/images/other/democastle.jpg",
-			"website": "https://www.github.com/jaliborc/democastle",
-			"keywords": [
-				"C++",
-				"Irrlicht Engine"
-			],
-			"resources": [
-				{
-					"type": "Github",
-					"name": "Source",
-					"url": "https://www.github.com/jaliborc/democastle"
-				},
-				{
-					"type": "Binary",
-					"name": "Builds",
-					"url": "https://www.github.com/jaliborc/democastle/releases"
-				},
-				{
-					"type": "Video",
-					"name": "Preview",
-					"url": "https://youtu.be/oKCe8hE4r5k"
-				}
-			]
-		},
-		{
-			"type": "WoWMod",
-			"name": "Bagnon",
-			"summary": "A complete replacement of the default inventory interface.",
-			"picture": "http://jaliborc.com/images/addons/small/bagnon.jpg",
-			"website": "https://wow.curseforge.com/projects/bagnon"
-		},
-		{
-			"type": "WoWMod",
-			"name": "OmniCC",
-			"summary": "Provides text countdowns to any element of the interface.",
-			"picture": "http://jaliborc.com/images/addons/small/omnicc.jpg",
-			"website": "https://wow.curseforge.com/projects/omni-cc"
-		},
-		{
-			"type": "WoWMod",
-			"name": "PetTracker",
-			"summary": "An authentic *pokedex* for combat pets and tamers.",
-			"picture": "http://jaliborc.com/images/addons/small/pettracker.jpg",
-			"website": "https://wow.curseforge.com/projects/pettracker"
-		},
-		{
-			"type": "WoWMod",
-			"name": "Scrap",
-			"summary": "Automatically sells all the items the user does not need to merchants.",
-			"picture": "http://jaliborc.com/images/addons/small/scrap.jpg",
-			"website": "https://wow.curseforge.com/projects/scrap"
-		},
-		{
-			"type": "WoWLib",
-			"name": "WoWUnit",
-			"summary": "Unit testing framework for World of Warcraft addons.",
-			"picture": "http://jaliborc.com/images/addons/small/wowunit.jpg",
-			"website": "https://github.com/jaliborc/wowunit"
-		},
-		{
-			"type": "WoWLib",
-			"name": "Sushi-3.0",
-			"summary": "An object oriented graphical user interface framework.",
-			"picture": "http://jaliborc.com/images/addons/small/sushi.jpg",
-			"website": "http://jaliborc.github.io/sushi-3.0"
-		},
-		{
-			"type": "WoWLib",
-			"name": "LibItemCache-1.1",
-			"summary": "Handles all the access to item information from multiple sources, including the server.",
-			"picture": "http://jaliborc.com/images/addons/small/libitemcache.jpg",
-			"website": "http://jaliborc.github.io/libitemcache-1.1/"
-		},
-		{
-			"type": "WoWLib",
-			"name": "LibItemSearch-1.2",
-			"summary": "A client side search engine for World of Warcraft items.",
-			"website": "https://github.com/jaliborc/libitemsearch-1.2"
 		}
 	],
+
 	"portfolio": [
 		{
-			"id": "research",
-			"title": "Research",
-			"picture": "http://jaliborc.com/videos/eyemove-thumb.webm",
-			"banner": "http://jaliborc.com/videos/eyemove-460.webm",
-			"summary": "Scientific studies on computer graphics and animation",
-			"details": "My research interests include real-time and photorealistic rendering, facial reconstruction, skin deformations, data driven animation and procedural methods. My current research focuses on modeling realistic humans, particularly reconstructing, animating and rendering human skin.",
+			"id": "generated",
+			"title": "Publications and Projects",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic07.jpg",
+			"banner": "http://dl3.webmfiles.org/big-buck-bunny_trailer.webm",
+			"summary": "Automatically build from publications and project data",
+			"details": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue.",
 			"content": [
+				{
+					"type": "chapter",
+					"title": "Publications",
+					"text": "Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
+				},
 				{
 					"type": "publications"
 				},
 				{
 					"type": "chapter",
-					"title": "Not Published",
-					"text": "Here are the working titles of other research topics I worked on, but did not have the chance to deepen enough or submit for publication. Instead of the publisher, the research laboratory or institute where the research was performed is listed. "
+					"title": "Filtered Projects",
+					"text": "Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
 				},
 				{
 					"type": "projects",
@@ -577,38 +216,54 @@
 			]
 		},
 		{
-			"id": "wow",
-			"title": "World of Warcraft",
-			"category": "Open Source",
-			"picture": "http://jaliborc.com/videos/addons-thumb.webm",
-			"banner": "http://jaliborc.com/videos/addons.webm",
-			"summary": "Third party plugins and open libraries for the famous game",
-			"details": "I am the developer of several major addons for World of Warcraft, one of the most famous and influential massively multiplayer online role-playing games of all time. Addons are third-party plugins that can enhance and change how a game looks or behaves. In the case of this game, this form os software is officialy supported by the game developer, which provides an official API to do so, but is restricted to modifications of the user interface.\n\nThis has been mostly a single man job, with the exception of occasional cooperations with translators and other developers for purposes such as localization, software compatibility or contribution to common libraries. Yet, in 2009 I started working together with Jason Greer (a former developer) on his addons. These were not much later handed over to me. Hence, a few addons such as Bagnon and OmniCC were not originally created by me.\n\nMost of the source code is publicly available, as I follow an open source model. I have also created many development tools for my own use, some of which are freely distributed.",
+			"id": "nosidebar",
+			"title": "No Sidebar",
+			"category": "Layouts",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic08.jpg",
+			"banner": "https://html5up.net/uploads/demos/helios/images/pic06.jpg",
+			"summary": "Morbi convallis lectus malesuada sed fermentum dolore amet ",
+			"details": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue.",
 			"content": [
 				{
 					"type": "chapter",
-					"title": "Development Process",
-					"text": "Programming is made in Lua, using an official API provided for all drawing, security and server communication mechanics. Rendering is done on top of OpenGL, but no direct access to the pipeline is permitted. If the developer whishes, XML can be used to declare static user interface objects and templates.\n\nGiven it is an online game, a lot of effort was put into ensuring addons do not allow for unfair play (for instance, performing automated actions) or that can change how the game world looks. Hence the lua environment can be seen as a restricted virtual machine.\n\nOne good example is that addons have no disk or internet access. When the program is started, all data must be loaded at once from plain Lua files as Lua variables. This makes it much harder than normal to develop programs that rely on large amounts of data. Ludwig, for instance, is an in-game database of every item in World of Warcraft (more than 63.000 as of 2014). Most of the development time was spent on efficiently storing the entire database as a single Lua string, while still allowing for fast searches. The same can be said of the world data PetTracker provides."
+					"title": "Ultrices tempor sagittis nisl",
+					"text": " Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
 				},
 				{
 					"type": "chapter",
-					"title": "Personal Path",
-					"text": "Making addons was my very first step into programming and computer science, when I was 13 years old. At the time, the great majority of addons were not very complex and the market far from profitable. For instance, my addon Scrap was the first junk seller to have an actual interface (others were configured using the command line) and the first addon to have in-game tutorials. The last latter became a common practice of the game developer, which now provides in-game tutorials for new interface elements it incorporates.\n\nNot all the addons I have created are still being maintained. Some became unecessary, while others had to be dropped to make time for other more popular projects. Two examples I want to highlight are Bongos Cornucopia and Cornucopia. The latter is one of the addons I am most proud of, although it never had much commercial success."
+					"title": "Augue euismod feugiat tempus",
+					"text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. "
+				}
+			]
+		},
+		{
+			"id": "rightsidebar",
+			"title": "Right Sidebar",
+			"category": "Layouts",
+			"picture": "https://html5up.net/uploads/demos/helios/images/pic09.jpg",
+			"banner": "https://html5up.net/uploads/demos/helios/images/pic06.jpg",
+			"summary": "Morbi convallis lectus malesuada sed fermentum dolore amet ",
+			"details": "Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia natoque aenean scelerisque vel lacinia mollis quam sodales congue.",
+			"content": [
+				{
+					"type": "chapter",
+					"title": "Ultrices tempor sagittis nisl",
+					"text": " Nascetur volutpat nibh ullamcorper vivamus at purus. Cursus ultrices porttitor sollicitudin imperdiet at pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit fringilla consequat dis arcu. Pellentesque mus tempor vitae pretium sodales porttitor lacus. Phasellus egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. Eleifend auctor turpis magnis sed porta nisl pretium. Aenean suspendisse nulla eget sed etiam parturient orci cursus nibh. Quisque eu nec neque felis laoreet diam morbi egestas. Dignissim cras rutrum consectetur ut penatibus fermentum nibh erat malesuada varius. "
 				},
 				{
 					"type": "chapter",
-					"title": "Most Popular",
-					"text": "These addons alone account for more than 70 million downloads.",
-					"secondary": true
+					"title": "Augue euismod feugiat tempus",
+					"text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. "
 				},
 				{
-					"type": "projects",
-					"filter": "wowmod",
+					"type": "chapter",
+					"title": "Accumsan sed penatibus",
+					"text": "Dolor sed fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis tellus ante diam nec penatibus dolor cras magna tempus feugiat veroeros.",
 					"secondary": true
 				},
 				{
 					"type": "profile",
-					"network": "curse",
+					"network": "github",
 					"secondary": true
 				},
 				{
@@ -617,42 +272,16 @@
 				},
 				{
 					"type": "chapter",
-					"title": "Noteworthy Tools & Libraries",
-					"text": "A small selection of publicly available tools I find relevant to mention.",
+					"title": "Sed lorem etiam consequat",
+					"text": "Tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.",
 					"secondary": true
 				},
 				{
 					"type": "projects",
-					"filter": "wowlib",
-					"secondary": true
-				},
-				{
-					"type": "profile",
-					"network": "github",
+					"filter": "opensource",
 					"secondary": true
 				}
 			]
-		},
-		{
-			"id": "other",
-			"title": "Other Projects",
-			"category": "Open Source",
-			"summary": "Open-source tools and small personal game projects",
-			"picture": "http://jaliborc.com/videos/rushgun-thumb.mp4",
-			"details": "Most of my relevant work, apart from [World of Wacraft](/wow) mods, is not open source nor available for distribution. Yet, over the years I did do some tiny game projects for fun and developed some tools for personal use I am happy to share. As intended for personal use, keep in mind it was not written with long-term usability in mind.",
-			"content": [
-				{
-					"type": "projects",
-					"filter": "opensource"
-				}
-			]
-		},
-		{
-			"id": "volunteer",
-			"title": "Volunteer Work",
-			"summary": "Sites and web applications I volunteered to do",
-			"picture": "http://jaliborc.com/images/web/jali&mari.jpg",
-			"details": "Page content still in the works."
 		}
 	]
 }

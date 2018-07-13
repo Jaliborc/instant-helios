@@ -16,24 +16,25 @@
     ul
       li
         a(href='/') Home
-      li
-        a Portfolio
-        ul
-          - let sections = _.groupBy(site.portfolio, page => page.category)
-          
-          for page in site.portfolio
-            - let section = page.category
-            if !section
-              li
-                a( href='/' + page.id )= page.title
-            else if sections[section]
-              li
-                a= page.category + '…'
-                ul
-                  for page in sections[section]
-                    li
-                      a( href='/' + page.id )= page.title  
-              - sections[section] = null
+      if site.portfolio
+        li
+          a Portfolio
+          ul
+            - let sections = _.groupBy(site.portfolio, page => page.category)
+            
+            for page in site.portfolio
+              - let section = page.category
+              if !section
+                li
+                  a( href='/' + page.id )= page.title
+              else if sections[section]
+                li
+                  a= page.category + '…'
+                  ul
+                    for page in sections[section]
+                      li
+                        a( href='/' + page.id )= page.title  
+                - sections[section] = null
       li
         a( href=site.basics.resume ) Resume
       li

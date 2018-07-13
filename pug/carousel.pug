@@ -1,14 +1,15 @@
-section.carousel
-  .reel
-    for page in site.portfolio
-      article
-        a.image.featured( href='/' + page.id )
-          +resizedimage(page.picture || 'assets/placeholder.jpg', 360, 260)
-        header
-          h3
-            a( href='/' + page.id )= page.title
-        p!= md(page.summary)
-  .forward
-    +icon('arrow')
-  .backward
-    +icon('arrow')
+if site.portfolio
+  section.carousel
+    .reel
+      for page in site.portfolio
+        article
+          a.image.featured( href='/' + page.id )
+            +resizedimage(page.picture || 'assets/placeholder.jpg', 360, 260)
+          header
+            h3
+              a( href='/' + page.id )= page.title
+          p!= md(page.summary)
+    .forward
+      +icon('arrow')
+    .backward
+      +icon('arrow')
