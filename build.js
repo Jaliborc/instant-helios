@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
 
 const helios = require('./index')
@@ -12,12 +12,9 @@ for ( let flag of ['pug', 'html', 'sass', 'css', 'js', 'assets'] )
 
 let json = JSON.parse(fs.readFileSync(source, 'utf8'))
 let out = path.join(path.dirname(source), 'build')
-if ( !fs.existsSync(out) )
-    fs.mkdirSync(out)
 
-let resized = path.join(out, 'resized')
-if ( !fs.existsSync(resized) )
-    fs.mkdirSync(resized)
+fs.ensureDirSync(out)
+fs.ensureDirSync(path.join(out, 'resized'))
 
 if ( all || args['assets'] )
   helios.assets(out)

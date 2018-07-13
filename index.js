@@ -1,5 +1,5 @@
-const fs = require('fs')
 const path = require('path')
+const fs = require('fs-extra')
 const _ = require('underscore')
 
 const success = '\x1b[32m√\x1b[0m '
@@ -23,7 +23,7 @@ exports.html = function(out, json) {
   for ( let page of pages ) {
     let html = buildpage({_: _, md: md, moment: moment, resize: resize, site: json, page: page})
 
-    fs.writeFileSync(path.join(out, page.id + '.html'), html, 'utf8')
+    fs.outputFileSync(path.join(out, page.id + '.html'), html, 'utf8')
     console.log(success + 'Written ' + page.id + '.html')
   }
 }
@@ -37,7 +37,7 @@ exports.css = function(out, json) {
     if (json.flavor.background)
       css = css.replace('header.jpg', json.flavor.background)
 
-    fs.writeFileSync(path.join(out, sheet + '.css'), css)
+    fs.outputFileSync(path.join(out, sheet + '.css'), css)
     console.log(success + 'Written ' + sheet + '.css')
   }
 }
