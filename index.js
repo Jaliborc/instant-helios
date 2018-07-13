@@ -2,9 +2,9 @@ const path = require('path')
 const fs = require('fs-extra')
 const _ = require('underscore')
 
-const success = '\x1b[32m√\x1b[0m '
-const fail = '\x1b[31m×\x1b[0m '
-const skip = '\x1b[33m×\x1b[0m '
+const success = '\x1b[32m√\x1b[0m'
+const fail = '\x1b[31m×\x1b[0m'
+const skip = '\x1b[33m×\x1b[0m'
 
 exports.html = function(out, json) {
   const pug = require('pug')
@@ -24,7 +24,7 @@ exports.html = function(out, json) {
     let html = buildpage({_: _, md: md, moment: moment, resize: resize, site: json, page: page})
 
     fs.outputFileSync(path.join(out, page.id + '.html'), html, 'utf8')
-    console.log(success + 'Written ' + page.id + '.html')
+    console.log(`${success} Written ${page.id}.html`)
   }
 }
 
@@ -33,26 +33,26 @@ exports.css = function(out, json) {
   const sheets = ['main', 'noscript']
 
   for ( let sheet of sheets ) {
-    let css = sass.renderSync({file: __dirname + '/sass/' + sheet + '.scss', outputStyle: 'compressed'}).css.toString('utf8')
+    let css = sass.renderSync({file: `${__dirname}/sass/${sheet}.scss`, outputStyle: 'compressed'}).css.toString('utf8')
     if (json.flavor.background)
       css = css.replace('header.jpg', json.flavor.background)
 
     fs.outputFileSync(path.join(out, sheet + '.css'), css)
-    console.log(success + 'Written ' + sheet + '.css')
+    console.log(`${success} Written ${sheet}.css`)
   }
 }
 
 exports.js = function(out) {
   const nmin = require('node-minify')
   const scripts = [
-    'jquery.min.js', 'jquery.dropotron.min.js', 'jquery.scrolly.min.js', 'jquery.scrollex.min.js',
-    'browser.min.js', 'breakpoints.min.js', 'svgxuse.min.js',
-    'util.js', 'main.js'
+    'jquery.min', 'jquery.dropotron.min', 'jquery.scrolly.min', 'jquery.scrollex.min',
+    'browser.min', 'breakpoints.min', 'svgxuse.min',
+    'util', 'main'
   ]
 
   nmin.minify({
     compressor: 'gcc',
-    input: _.map(scripts, script => __dirname + '/js/' + script),
+    input: _.map(scripts, script => `${__dirname}/js/${script}.js`),
     output: path.join(out, 'scripts.js'),
     callback: error =>
       console.log(error && (fail + 'Failed to compress scripts.js') || (success + 'Written scripts.js'))
@@ -61,8 +61,8 @@ exports.js = function(out) {
 
 exports.assets = function(out) {
   fs.readdirSync(__dirname + '/assets').forEach(file => {
-    fs.createReadStream(path.join(__dirname + '/assets', file)).pipe(fs.createWriteStream(path.join(out, file)));
-    console.log(success + 'Written ' + file)
+    fs.createReadStream(path.join(__dirname + '/assets', file)).pipe(fs.createWriteStream(path.join(out, file)))
+    console.log(`${success} Written ${file}`)
   })
 }
 
@@ -84,7 +84,7 @@ exports.media = function(out, filepath, width, height) {
       require('jimp').read(filepath, (error, img) => {
         if (img)
           img.cover(width, height).write(outpath, error => {
-            console.log((error && (fail + 'Failed ') || (success + 'Written ')) + displayname)
+            console.log((error && (fail + ' Failed ') || (success + ' Written ')) + displayname)
           })
       })
 
@@ -100,10 +100,10 @@ exports.media = function(out, filepath, width, height) {
       ])
 
       cmd.stderr.on('data', data => cmd.stdin.write('y\n'))
-      cmd.on('exit', code => console.log((code != 0 && (fail + 'Failed ') || (success + 'Written ')) + displayname))
+      cmd.on('exit', code => console.log((code != 0 && (fail + ' Failed ') || (success + ' Written ')) + displayname))
 
     } else {
-      console.log(error + filepath + ' is not a supported image or video file format.')
+      console.log(`${fail} ${filepath} is not a supported image or video file format.`)
     }
   }
 
