@@ -28,14 +28,16 @@ exports.html = function(out, json) {
   }
 }
 
-exports.css = function(out) {
+exports.css = function(out, json) {
   const sass = require('sass')
   const sheets = ['main', 'noscript']
 
   for ( let sheet of sheets ) {
-    let css = sass.renderSync({file: 'sass/' + sheet + '.scss', outputStyle: 'compressed'})
+    let css = sass.renderSync({file: 'sass/' + sheet + '.scss', outputStyle: 'compressed'}).css.toString('utf8')
+    if (json.flavor.background)
+      css = css.replace('header.jpg', json.flavor.background)
 
-    fs.writeFileSync(path.join(out, sheet + '.css'), css.css, 'utf8')
+    fs.writeFileSync(path.join(out, sheet + '.css'), css)
     console.log(success + 'Written ' + sheet + '.css')
   }
 }

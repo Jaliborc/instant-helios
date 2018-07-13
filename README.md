@@ -25,7 +25,7 @@ Full tag list:
     --html or --pug     Generate .html files and resized media files
     --css or --sass     Generate .css files
     --js                Generate .js files
-    --assets            Generate media assets (placeholder images, icons,...)
+    --assets            Copy media assets (placeholder images, icons,...)
 
 ## Programmatic Usage
 You can use *Instant Helios* in node as well:
@@ -38,10 +38,10 @@ You can use *Instant Helios* in node as well:
     helios.html(buildDirectory, data)
 
     // Generate .css files
-    helios.css(buildDirectory)
+    helios.css(buildDirectory, data)
 
     // Generate .js files
     helios.js(buildDirectory)
 
-    // Generate media assets
+    // Copy media assets
     helios.assets(buildDirectory)
