@@ -8,7 +8,7 @@ const skip = '\x1b[33m×\x1b[0m '
 
 exports.html = function(out, json) {
   const pug = require('pug')
-  const buildpage = pug.compileFile('pug/main.pug')
+  const buildpage = pug.compileFile(__dirname + '/pug/main.pug')
 
   const moment = require('moment')
   const markdownit = require('markdown-it')({breaks: true, linkify: true})
@@ -33,7 +33,7 @@ exports.css = function(out, json) {
   const sheets = ['main', 'noscript']
 
   for ( let sheet of sheets ) {
-    let css = sass.renderSync({file: 'sass/' + sheet + '.scss', outputStyle: 'compressed'}).css.toString('utf8')
+    let css = sass.renderSync({file: __dirname + '/sass/' + sheet + '.scss', outputStyle: 'compressed'}).css.toString('utf8')
     if (json.flavor.background)
       css = css.replace('header.jpg', json.flavor.background)
 
@@ -52,7 +52,7 @@ exports.js = function(out) {
 
   nmin.minify({
     compressor: 'gcc',
-    input: _.map(scripts, script => 'js/' + script),
+    input: _.map(scripts, script => __dirname + '/js/' + script),
     output: path.join(out, 'scripts.js'),
     callback: error =>
       console.log(error && (fail + 'Failed to compress scripts.js') || (success + 'Written scripts.js'))
@@ -60,8 +60,8 @@ exports.js = function(out) {
 }
 
 exports.assets = function(out) {
-  fs.readdirSync('assets').forEach(file => {
-    fs.createReadStream(path.join('assets', file)).pipe(fs.createWriteStream(path.join(out, file)));
+  fs.readdirSync(__dirname + '/assets').forEach(file => {
+    fs.createReadStream(path.join(__dirname + '/assets', file)).pipe(fs.createWriteStream(path.join(out, file)));
     console.log(success + 'Written ' + file)
   })
 }
