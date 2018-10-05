@@ -19,7 +19,6 @@
   "scripts": {
     "test": "jshint cli.js | node cli"
   },
-  "preferGlobal": true,
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.15",
     "fs-extra": "^6.0.1",
