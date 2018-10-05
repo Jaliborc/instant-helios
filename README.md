@@ -34,6 +34,9 @@ You can use *Instant Helios* in node as well:
     let buildDirectory = <a directory of your choosing>
     let data = <data structure as if parsed from a .json file>
 
+    // Ensure require build directories exist or are created
+    helios.dirs(buildDirectory)
+
     // Generate .html files and resized media files
     helios.html(buildDirectory, data)
 
@@ -45,3 +48,6 @@ You can use *Instant Helios* in node as well:
 
     // Copy media assets
     helios.assets(buildDirectory)
+
+    // Do all of the above, in order
+    helios.all(buildDirectory, data)

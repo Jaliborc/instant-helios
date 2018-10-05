@@ -5,19 +5,17 @@ const path = require('path')
 
 const helios = require('./index')
 const args = require('minimist')(process.argv.slice(2))
-const source = args._[0] || 'resume.json'
+const source = args._[0]
 
 let all = true
 for ( let flag of ['pug', 'html', 'sass', 'css', 'js', 'assets'] )
   if ( args[flag] )
     all = false
 
-let json = JSON.parse(fs.readFileSync(source, 'utf8'))
-let out = path.join(path.dirname(source), 'build')
+let json = fs.readJsonSync(source || path.join(__dirname, 'resume.json'), 'utf8')
+let out = path.join(path.dirname(source || ''), 'build')
 
-fs.ensureDirSync(out)
-fs.ensureDirSync(path.join(out, 'resized'))
-
+helios.dirs(out)
 if ( all || args['assets'] )
   helios.assets(out)
 if ( all || args['pug'] || args['html'] )

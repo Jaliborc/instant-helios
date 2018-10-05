@@ -4,7 +4,7 @@
   "description": "Instantly build a website using HTML5Up's Helios theme and an extended jsonresume schema.",
   "author": "Joao Cardoso (Jaliborc)",
   "license": "MIT",
-  "main": "build.js",
+  "main": "cli.js",
   "homepage": "https://github.com/jaliborc/instant-helios",
   "repository": {
     "type": "git",
@@ -14,10 +14,10 @@
     "url": "https://github.com/jaliborc/instant-helios/issues"
   },
   "bin": {
-    "helios": "build.js"
+    "helios": "cli.js"
   },
   "scripts": {
-    "test": "jshint build.js | node build"
+    "test": "jshint cli.js | node cli"
   },
   "preferGlobal": true,
   "dependencies": {

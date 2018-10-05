@@ -6,6 +6,19 @@ const success = '\x1b[32m√\x1b[0m'
 const fail = '\x1b[31m×\x1b[0m'
 const skip = '\x1b[33m×\x1b[0m'
 
+exports.all = function(out, json) {
+  exports.dirs(out)
+  exports.assets(out)
+  exports.html(out, json)
+  exports.css(out, json)
+  exports.js(out)
+}
+
+exports.dirs = function(out) {
+  fs.ensureDirSync(out)
+  fs.ensureDirSync(path.join(out, 'resized'))
+}
+
 exports.html = function(out, json) {
   const pug = require('pug')
   const buildpage = pug.compileFile(__dirname + '/pug/main.pug')
