@@ -89,7 +89,7 @@ exports.media = function(out, filepath, width, height) {
   let outpath = path.join(out, outname)
 
   if ( lock[outpath] ) {
-    console.log(skip + 'skipped ' + displayname)
+    console.log(skip + ' Skipped ' + displayname)
   } else {
     lock[outpath] = true
 
