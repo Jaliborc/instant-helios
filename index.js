@@ -1,10 +1,12 @@
+const _ = require('underscore')
 const path = require('path')
 const fs = require('fs-extra')
-const _ = require('underscore')
+const figures = require('figures')
+const chalk = require('chalk')
 
-const success = '\x1b[32m√\x1b[0m'
-const fail = '\x1b[31m×\x1b[0m'
-const skip = '\x1b[33m×\x1b[0m'
+const success = figures(chalk.green('✔'))
+const skip =  figures(chalk.yellow('✖'))
+const fail =  figures(chalk.red('✖'))
 
 exports.all = function(out, json) {
   exports.dirs(out)
@@ -68,24 +70,22 @@ exports.js = function(out) {
     input: _.map(scripts, script => `${__dirname}/js/${script}.js`),
     output: path.join(out, 'scripts.js'),
     callback: error =>
-      console.log(error && (fail + 'Failed to compress scripts.js') || (success + 'Written scripts.js'))
+      console.log(error && `${fail} Failed to compress scripts.js` || `${success} Written scripts.js`)
   })
 }
 
 exports.assets = function(out) {
   fs.readdirSync(__dirname + '/assets').forEach(file => {
-    fs.createReadStream(path.join(__dirname + '/assets', file)).pipe(fs.createWriteStream(path.join(out, file)))
+    fs.createReadStream(path.join(__dirname, '/assets', file)).pipe(fs.createWriteStream(path.join(out, file)))
     console.log(`${success} Written ${file}`)
   })
 }
 
 let lock = []
 exports.media = function(out, filepath, width, height) {
-  const crypto = require('crypto')
-
   let ext = path.extname(filepath)
-  let outname = crypto.createHash('md5').update(filepath + '?' + width + '?' + height).digest('hex') + ext
-  let displayname = outname + ' (' + filepath + ')'
+  let outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
+  let displayname = outname + chalk.gray(` (${filepath})`)
   let outpath = path.join(out, outname)
 
   if ( lock[outpath] ) {
@@ -97,7 +97,7 @@ exports.media = function(out, filepath, width, height) {
       require('jimp').read(filepath, (error, img) => {
         if (img)
           img.cover(width, height).write(outpath, error => {
-            console.log((error && (fail + ' Failed ') || (success + ' Written ')) + displayname)
+            console.log((error && `${fail} Failed ` || `${success} Written `) + displayname)
           })
       })
 
@@ -113,7 +113,7 @@ exports.media = function(out, filepath, width, height) {
       ])
 
       cmd.stderr.on('data', data => cmd.stdin.write('y\n'))
-      cmd.on('exit', code => console.log((code != 0 && (fail + ' Failed ') || (success + ' Written ')) + displayname))
+      cmd.on('exit', code => console.log((code != 0 && `${fail} Failed ` || `${success} Written `) + displayname))
 
     } else {
       console.log(`${fail} ${filepath} is not a supported image or video file format.`)
