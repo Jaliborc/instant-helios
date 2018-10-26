@@ -58,20 +58,19 @@ exports.css = function(out, json) {
 }
 
 exports.js = function(out) {
-  const nmin = require('node-minify')
+  const uglify = require('uglify-js')
   const scripts = [
     'jquery.min', 'jquery.dropotron.min', 'jquery.scrolly.min', 'jquery.scrollex.min',
     'browser.min', 'breakpoints.min', 'svgxuse.min',
     'util', 'main'
   ]
 
-  nmin.minify({
-    compressor: 'gcc',
-    input: _.map(scripts, script => `${__dirname}/js/${script}.js`),
-    output: path.join(out, 'scripts.js'),
-    callback: error =>
-      console.log(error && `${fail} Failed to compress scripts.js` || `${success} Written scripts.js`)
-  })
+  let js = _.reduce(scripts, (v, script) => v + fs.readFileSync(`${__dirname}/js/${script}.js`, 'utf-8') + '\n')
+  let reduced = uglify.minify(js, '')
+  if (!reduced.error)
+    fs.outputFileSync(path.join(out, 'final.css'), reduced.code)
+
+  console.log(reduced.error && `${fail} Failed to compress scripts.js` || `${success} Written scripts.js`)
 }
 
 exports.assets = function(out) {
