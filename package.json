@@ -17,7 +17,7 @@
     "helios": "cli.js"
   },
   "scripts": {
-    "test": "jshint cli.js | node cli"
+    "test": "jshint cli.js && cd .. && node instant-helios/cli"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.16",
