@@ -75,7 +75,7 @@ exports.js = function(out) {
 
 exports.assets = function(out) {
   fs.readdirSync(__dirname + '/assets', { withFileTypes: true }).forEach(file => {
-    let input = path.join(__dirname, '/assets', file)
+    let input = path.join(__dirname + '/assets', file)
     if (fs.statSync(input).isFile()) {
       fs.createReadStream(input).pipe(fs.createWriteStream(path.join(out, file)))
       console.log(`${success} Written ${file}`)
