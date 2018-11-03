@@ -26,6 +26,9 @@ mixin contentSection(section)
           
       when 'chapter'
         section
+          if section.picture
+            a.image.centered( href=section.url )
+              +image(section.picture)
           header
             h3= section.title
           p!= md(section.text)

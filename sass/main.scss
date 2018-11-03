@@ -306,13 +306,6 @@
 /* Sections/Article */
 
 	section, article {
-		/*margin-bottom: 3em;
-
-		> :last-child,
-		&:last-child {
-			margin-bottom: 0;
-		}*/
-
 		&.special > {
 			header, footer {
 				text-align: center;
@@ -376,6 +369,7 @@
 			margin: 0 0 2em 0;
 
 			img, video {
+				max-width: 100%;
 				margin: 0 auto;
 				width: auto;
 			}

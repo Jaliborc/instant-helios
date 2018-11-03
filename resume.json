@@ -233,7 +233,13 @@
 					"type": "chapter",
 					"title": "Augue euismod feugiat tempus",
 					"text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. "
-				}
+				},
+        {
+          "type": "chapter",
+          "title": "Augue euismod feugiat tempus",
+          "picture": "https://html5up.net/uploads/demos/helios/images/pic09.jpg",
+          "text": "Pretium tellus in euismod a integer sodales neque. Nibh quis dui quis mattis eget imperdiet venenatis feugiat. Neque primis ligula cum erat aenean tristique luctus risus ipsum praesent iaculis. Fermentum elit ut nunc urna volutpat donec cubilia commodo risus morbi. Lobortis vestibulum velit malesuada ante egestas odio nisl duis sociis purus faucibus morbi. Eget massa mus etiam sociis pharetra magna. "
+        }
 			]
 		},
 		{
