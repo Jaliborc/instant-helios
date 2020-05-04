@@ -4,7 +4,7 @@ if site.portfolio
       for page in site.portfolio
         article
           a.image.featured( href='/' + page.id )
-            +resizedimage(page.picture || 'assets/placeholder.jpg', 360, 260)
+            +resizedimage(page.picture || placeholder(), 360, 260)
           header
             h3
               a( href='/' + page.id )= page.title

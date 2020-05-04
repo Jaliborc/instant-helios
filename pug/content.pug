@@ -1,7 +1,7 @@
 mixin listEntry(entry)
   .minor
     a.image.fit( href=entry.website )
-      +resizedimage(entry.picture || 'assets/placeholder.jpg', 217, 145)
+      +resizedimage(entry.picture || placeholder(), 217, 145)
     
   .major
     h4
@@ -17,7 +17,10 @@ mixin listEntry(entry)
           li
             a( href=item.url )
               +icon( item.type.toLowerCase() )
-              = item.name
+              if item.type.toLowerCase() == 'award'
+                b= item.name
+              else
+                = item.name
       
 mixin contentSection(section)
     case section.type.toLowerCase()
