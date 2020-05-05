@@ -88,28 +88,29 @@ exports.assets = function(out) {
 let lock = []
 exports.media = function(out, filepath, width, height) {
   let ext = path.extname(filepath)
-  let outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
-  let displayname = outname + chalk.gray(` (${filepath})`)
-  let outpath = path.join(out, outname)
+  if (ext == '.png' || ext == '.jpg' || ext == '.bmp')
+    ext = '.webp'
+
+  const outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
+  const displayname = outname + chalk.gray(` (${filepath})`)
+  const outpath = path.join(out, outname)
 
   if ( lock[outpath] ) {
     console.log(skip + ' Skipped ' + displayname)
   } else {
     lock[outpath] = true
 
-    if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' ) {
+    if (ext == '.webp' || ext == '.png' || ext == '.jpg' || ext == '.bmp') {
       require('jimp').read(filepath, (error, img) => {
         if (img)
-          img.cover(width, height).write(outpath, error => {
-            console.log((error && `${fail} Failed ` || `${success} Written `) + displayname)
-          })
+          img.cover(width, height).write(outpath, error =>
+            console.log((error && `${fail} Failed ` || `${success} Written `) + displayname))
       })
 
-    } else if ( ext == '.webm' || ext == '.mp4' || ext == '.ogg' ) {
+    } else if (ext == '.webm' || ext == '.mp4' || ext == '.ogg') {
       const ffmpeg = require('@ffmpeg-installer/ffmpeg')
       const spawn = require('child_process').spawn
-
-      let cmd = spawn(ffmpeg.path, [
+      const cmd = spawn(ffmpeg.path, [
         '-i',  filepath,
         '-vf', 'scale=' + width + ':' + height + ':force_original_aspect_ratio=increase,crop=' + width + ':' + height,
         '-an',
