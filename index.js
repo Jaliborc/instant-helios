@@ -35,10 +35,8 @@ exports.html = function(out, json) {
     {id: 'index', welcome: true}
   ])
 
-  for (let page of pages) {
-    let numholders = 0
-    let placeholder = () => `${__dirname}/assets/${++numholders}.jpg`
-    let html = buildpage({_: _, md: md, moment: moment, resize: resize, placeholder: placeholder, site: json, page: page})
+  for ( let page of pages ) {
+    let html = buildpage({_: _, md: md, moment: moment, resize: resize, site: json, page: page})
 
     fs.outputFileSync(path.join(out, page.id + '.html'), html, 'utf8')
     console.log(`${success} Written ${page.id}.html`)
@@ -88,37 +86,33 @@ exports.assets = function(out) {
 let lock = []
 exports.media = function(out, filepath, width, height) {
   let ext = path.extname(filepath)
-  if (ext == '.png' || ext == '.jpg' || ext == '.bmp')
-    ext = '.webp'
-
-  const outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
-  const displayname = outname + chalk.gray(` (${filepath})`)
-  const outpath = path.join(out, outname)
+  let outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
+  let displayname = outname + chalk.gray(` (${filepath})`)
+  let outpath = path.join(out, outname)
 
   if ( lock[outpath] ) {
     console.log(skip + ' Skipped ' + displayname)
   } else {
     lock[outpath] = true
 
-    if (ext == '.webp' || ext == '.png' || ext == '.jpg' || ext == '.bmp') {
+    if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' ) {
       require('jimp').read(filepath, (error, img) => {
         if (img)
-          img.cover(width, height).write(outpath, error =>
-            console.log((error && `${fail} Failed ` || `${success} Written `) + displayname))
+          img.cover(width, height).write(outpath, error => {
+            console.log((error && `${fail} Failed ` || `${success} Written `) + displayname)
+          })
       })
 
-    } else if (ext == '.webm' || ext == '.mp4' || ext == '.ogg') {
+    } else if ( ext == '.webm' || ext == '.mp4' || ext == '.ogg' ) {
       const ffmpeg = require('@ffmpeg-installer/ffmpeg')
       const spawn = require('child_process').spawn
-      const cmd = spawn(ffmpeg.path, [
+
+      let cmd = spawn(ffmpeg.path, [
         '-i',  filepath,
         '-vf', 'scale=' + width + ':' + height + ':force_original_aspect_ratio=increase,crop=' + width + ':' + height,
         '-an',
         outpath
-      ])
-
-      cmd.stderr.on('data', data => cmd.stdin.write('y\n'))
-      cmd.on('exit', code => console.log((code != 0 && `${fail} Failed ` || `${success} Written `) + displayname))
+      ]).on('exit', code => console.log((code != 0 && `${fail} Failed ` || `${success} Written `) + displayname))
 
     } else {
       console.log(`${fail} ${filepath} is not a supported image or video file format.`)
