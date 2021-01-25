@@ -36,7 +36,9 @@ exports.html = function(out, json) {
   ])
 
   for ( let page of pages ) {
-    let html = buildpage({_: _, md: md, moment: moment, resize: resize, site: json, page: page})
+    let numholders = 0
+    let placeholder = () => `${__dirname}/assets/${++numholders}.jpg`
+    let html = buildpage({_: _, md: md, moment: moment, resize: resize, placeholder: placeholder, site: json, page: page})
 
     fs.outputFileSync(path.join(out, page.id + '.html'), html, 'utf8')
     console.log(`${success} Written ${page.id}.html`)
