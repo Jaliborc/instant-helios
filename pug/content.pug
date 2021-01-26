@@ -56,7 +56,7 @@ mixin contentSection(section)
                 = article.publisher
               .line
                 if article.releaseDate
-                  i= 'Published ' + moment(article.releaseDate, 'MMMM YYYY')
+                  i= 'Published ' + moment(article.releaseDate).format('MMMM YYYY')
                 else
                   i= 'TBA'
                 
