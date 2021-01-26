@@ -88,6 +88,11 @@ exports.assets = function(out) {
 let lock = []
 exports.media = function(out, filepath, width, height) {
   let ext = path.extname(filepath)
+  if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' || ext == '.webp' )
+    ext = '.webp'
+  else if ( ext == '.webm' || ext == '.mp4' || ext == '.ogg' )
+    ext = '.webm'
+
   let outname = require('crypto').createHash('md5').update(`${filepath}?${width}?${height}`).digest('hex') + ext
   let displayname = outname + chalk.gray(` (${filepath})`)
   let outpath = path.join(out, outname)
@@ -97,7 +102,7 @@ exports.media = function(out, filepath, width, height) {
   } else {
     lock[outpath] = true
 
-    if ( ext == '.png' || ext == '.jpg' || ext == '.bmp' ) {
+    if ( ext == '.webp' ) {
       require('jimp').read(filepath, (error, img) => {
         if (img)
           img.cover(width, height).write(outpath, error => {
@@ -105,7 +110,7 @@ exports.media = function(out, filepath, width, height) {
           })
       })
 
-    } else if ( ext == '.webm' || ext == '.mp4' || ext == '.ogg' ) {
+    } else if ( ext == '.webm' ) {
       const ffmpeg = require('@ffmpeg-installer/ffmpeg')
       const spawn = require('child_process').spawn
 
