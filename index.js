@@ -1,4 +1,4 @@
-const _ = require('underscore')
+const _ = require('lodash')
 const path = require('path')
 const fs = require('fs-extra')
 const figures = require('figures')
@@ -23,12 +23,12 @@ exports.dirs = function(out) {
 
 exports.html = function(out, json) {
   const pug = require('pug')
-  const buildpage = pug.compileFile(__dirname + '/pug/main.pug')
-
   const moment = require('moment')
-  const markdownit = require('markdown-it')({breaks: true, linkify: true})
-  const md = (text) => markdownit.renderInline(text || '').replace(/\r?\n|\r/g, '').replace(/<br><br>/g, '</p><p>')
+  const buildpage = pug.compileFile(__dirname + '/pug/main.pug')
+  const markdown = require('markdown-it')({breaks: true, linkify: true})
+  
   const resize = (img, w, h) => path.join('resized', exports.media(path.join(out, 'resized'), img, w, h))
+  const md = (str) => markdown.renderInline(str || '')
 
   let pages = _.union(_.clone(json.portfolio), [
     {id: '404', title: json.flavor.error.title, summary: json.flavor.error.details},
@@ -38,7 +38,7 @@ exports.html = function(out, json) {
   for ( let page of pages ) {
     let numholders = 0
     let placeholder = () => `${__dirname}/assets/${++numholders}.jpg`
-    let html = buildpage({_: _, md: md, moment: moment, resize: resize, placeholder: placeholder, site: json, page: page})
+    let html = buildpage({_, md, moment, resize, placeholder, page, site: json})
 
     fs.outputFileSync(path.join(out, page.id + '.html'), html, 'utf8')
     console.log(`${success} Written ${page.id}.html`)
@@ -67,10 +67,10 @@ exports.js = function(out) {
     'util', 'main'
   ]
 
-  let js = _.reduce(scripts, (v, script) => v + fs.readFileSync(`${__dirname}/js/${script}.js`, 'utf-8') + '\n')
+  let js = _.reduce(scripts, (js, path) => js + fs.readFileSync(`${__dirname}/js/${path}.js`, 'utf-8') + '\n', '')
   let reduced = uglify.minify(js, '')
   if (!reduced.error)
-    fs.outputFileSync(path.join(out, 'final.css'), reduced.code)
+    fs.outputFileSync(path.join(out, 'scripts.js'), reduced.code)
 
   console.log(reduced.error && `${fail} Failed to compress scripts.js` || `${success} Written scripts.js`)
 }
