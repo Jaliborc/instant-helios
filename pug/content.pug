@@ -33,7 +33,7 @@ mixin contentSection(section)
             a.image.centered( href=section.url )
               +image(section.picture)
           header
-            h3= section.title
+            h3!= md(section.title)
           p!= md(section.text)
       
       when 'profile'

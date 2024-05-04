@@ -1,5 +1,5 @@
 section#welcome
   header
     h2!= md(site.flavor.welcome.title)
-    p!= md(site.flavor.welcome.details)
-  != site.basics.summary
+    p!= md(site.flavor.welcome.summary)
+  != md(site.flavor.welcome.details || site.basics.summary)

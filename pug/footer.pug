@@ -5,7 +5,7 @@
         section.contact
           header
             h3!= md(site.flavor.contact.title)
-          p!= md(site.flavor.contact.details)
+          p!= md(site.flavor.contact.summary)
           ul.icons
             li
               a.icon(href= '/resume')
@@ -18,7 +18,4 @@
                   span.label= profile.network
         .copyright
           ul.menu
-            li= '© ' + site.basics.name + '. All rights reserved.'
-            li
-              | Design: 
-              a(href='http://html5up.net') HTML5 UP
+            li= '© ' + (site.basics.owner || site.basics.name) + '. All rights reserved.'

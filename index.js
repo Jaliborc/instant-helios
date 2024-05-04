@@ -31,7 +31,7 @@ exports.html = function(out, json) {
   const md = (str) => markdown.renderInline(str || '')
 
   let pages = _.union(_.clone(json.portfolio), [
-    {id: '404', title: json.flavor.error.title, summary: json.flavor.error.details},
+    {id: '404', title: json.flavor.error.title, summary: json.flavor.error.summary},
     {id: 'index', welcome: true}
   ])
 
